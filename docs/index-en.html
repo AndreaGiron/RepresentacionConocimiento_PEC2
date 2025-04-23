@@ -1,0 +1,2914 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>Tourism and recomendations</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://www.w3.org/andrea/ontologies/2025/3/tourismOntology","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://www.w3.org/andrea/ontologies/2025/3/tourismOntology","name":"Tourism and recomendations", "headline":"Tourism and Recomendations Ontology", "dateReleased":""23 Apr, 2025"", "dateModified":""23 Apr, 2025"", "version":"v1.0", "license":"null", "author":[{"@type":"Person","name":"Andrea Giron"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Tourism and recomendations</h1>
+<h2>Release: "23 Apr, 2025"</h2>
+
+
+<dl>
+<dt>Modified on: "23 Apr, 2025"</dt>
+<dt>This version:</dt>
+<dd><a href="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology">http://www.w3.org/andrea/ontologies/2025/3/tourismOntology</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology">http://www.w3.org/andrea/ontologies/2025/3/tourismOntology</a></dd>
+<dt>Revision:</dt>
+<dd>v1.0</dd>
+<dt>Issued on:</dt>
+<dd>Date issued</dd>
+<dt>Authors:</dt>
+<dd>Andrea Giron, <a href="https://www.uoc.edu/es">Universitat Oberta de Catalunya (UOC)</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="null" target="_blank"><img src="https://img.shields.io/badge/License-null-blue.svg" alt="null" /></a>
+<a href="null" rel="license" target="_blank">
+<img src="null" style="border-width:0" alt="License" />
+</a>
+<br/></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Revision: v1.0. Retrieved from: http://www.w3.org/andrea/ontologies/2025/3/tourismOntology</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+Tourism and Recomendations Ontology</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">This ontology aims to formally model the domain of smart tourism, including tourist events, hotel offerings, attractions, and restaurants in various cities. It is designed to structure, analyze, and reuse tourism-related information to support personalized recommendations of destinations and services. The ontology will define key tourism concepts and their relationships, enabling knowledge inference from available data.</span>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">Tourism and recomendations: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#/v1.0#Beach"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Beach">Beach</a>
+   </li>
+   <li>
+      <a href="#/v1.0#Bike"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bike">Bike</a>
+   </li>
+   <li>
+      <a href="#/v1.0#Bus"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bus">Bus</a>
+   </li>
+   <li>
+      <a href="#/v1.0#City"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#City">City</a>
+   </li>
+   <li>
+      <a href="#/v1.0#CulturalAttraction"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#CulturalAttraction">CulturalAttraction</a>
+   </li>
+   <li>
+      <a href="#/v1.0#Event"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Event">Event</a>
+   </li>
+   <li>
+      <a href="#/v1.0#FoodEstablishment"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#FoodEstablishment">FoodEstablishment</a>
+   </li>
+   <li>
+      <a href="#/v1.0#Hotel"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel">Hotel</a>
+   </li>
+   <li>
+      <a href="#/v1.0#Monument"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Monument">Monument</a>
+   </li>
+   <li>
+      <a href="#/v1.0#Museum"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Museum">Museum</a>
+   </li>
+   <li>
+      <a href="#/v1.0#Park"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Park">Park</a>
+   </li>
+   <li>
+      <a href="#/v1.0#Place"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Place">Place</a>
+   </li>
+   <li>
+      <a href="#/v1.0#Restaurant"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurant">Restaurant</a>
+   </li>
+   <li>
+      <a href="#/v1.0#Settlement"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Settlement">Settlement</a>
+   </li>
+   <li>
+      <a href="#/v1.0#Subway"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Subway">Subway</a>
+   </li>
+   <li>
+      <a href="#/v1.0#Taxi"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Taxi">
+         <span>Taxi</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#TouristAsset"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#TouristAsset">TouristAsset</a>
+   </li>
+   <li>
+      <a href="#/v1.0#TouristAttraction"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#TouristAttraction">TouristAttraction</a>
+   </li>
+   <li>
+      <a href="#/v1.0#Tram"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Tram">Tram</a>
+   </li>
+   <li>
+      <a href="#/v1.0#Transport"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Transport">Transport</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#/v1.0#availableIn"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#availableIn">availableIn</a>
+   </li>
+   <li>
+      <a href="#/v1.0#locatedIn"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn">locatedIn</a>
+   </li>
+   <li>
+      <a href="#/v1.0#occursIn"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#occursIn">occursIn</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#/v1.0#hasAttractionScore"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasAttractionScore">
+         <span>has Attraction Score</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#hasEventID"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventID">
+         <span>has Event I D</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#hasEventType"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventType">
+         <span>has Event Type</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#hasHotelScore"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelScore">
+         <span>has Hotel Score</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#hasHotelType"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelType">
+         <span>has Hotel Type</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#hasLocation"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasLocation">
+         <span>has Location</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#hasPlaceID"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID">
+         <span>has Place I D</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#hasPriceCategory"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPriceCategory">
+         <span>has Price Category</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#hasProvider"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasProvider">
+         <span>has Provider</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#hasRestaurantScore"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantScore">
+         <span>has Restaurant Score</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#hasServesCuisine"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasServesCuisine">
+         <span>has Serves Cuisine</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#hasTransportID"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasTransportID">
+         <span>has Transport I D</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#hasTransportPrice"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasTransportPrice">
+         <span>has Transport Price</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#hasDate"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasDate">hasDate</a>
+   </li>
+   <li>
+      <a href="#/v1.0#hasEventName"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventName">hasEventName</a>
+   </li>
+   <li>
+      <a href="#/v1.0#hasHotelPrice"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelPrice">hasHotelPrice</a>
+   </li>
+   <li>
+      <a href="#/v1.0#hasPlaceName"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName">hasPlaceName</a>
+   </li>
+   <li>
+      <a href="#/v1.0#hasRestaurantPrice"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantPrice">hasRestaurantPrice</a>
+   </li>
+   <li>
+      <a href="#/v1.0#hasStarRating"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasStarRating">Indicates the number of stars</a>
+   </li>
+   <li>
+      <a href="#/v1.0#isRecomended"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#isRecomended">
+         <span>is Recomended</span>
+      </a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"
+         title="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled">
+         <span>is Rule Enabled</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2000/01/rdf-schema#title" title="http://www.w3.org/2000/01/rdf-schema#title">
+         <span>title</span>
+      </a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#/v1.0#Autobus"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Autobus">
+         <span>Autobus</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#Barcelona"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Barcelona">
+         <span>Barcelona</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#Bicicleta_Pública"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bicicleta_Pública">
+         <span>Bicicleta Pública</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#Bilbao"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bilbao">
+         <span>Bilbao</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#Cadiz"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Cadiz">
+         <span>Cadiz</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#Carnaval_Cadiz"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Carnaval_Cadiz">
+         <span>Carnaval Cadiz</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#Carnaval_Sevilla"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Carnaval_Sevilla">
+         <span>Carnaval Sevilla</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#Castillo_Cadiz"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Castillo_Cadiz">
+         <span>Castillo Cadiz</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#Castillo_Sevilla"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Castillo_Sevilla">
+         <span>Castillo Sevilla</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#Catedral_Cadiz"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Catedral_Cadiz">
+         <span>Catedral Cadiz</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#Congreso_Bilbao"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Congreso_Bilbao">
+         <span>Congreso Bilbao</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#Congreso_Cadiz"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Congreso_Cadiz">
+         <span>Congreso Cadiz</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#Feria_Toledo"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Feria_Toledo">
+         <span>Feria Toledo</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#Hotel_Palace_Zaragoza"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel_Palace_Zaragoza">
+         <span>Hotel Palace Zaragoza</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#Hotel_Royal_Bilbao"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel_Royal_Bilbao">
+         <span>Hotel Royal Bilbao</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#Hotel_Royal_Malaga"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel_Royal_Malaga">
+         <span>Hotel Royal Malaga</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#Hotel_Royal_Pamplona"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel_Royal_Pamplona">
+         <span>Hotel Royal Pamplona</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#Hotel_Vista_Cadiz"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel_Vista_Cadiz">
+         <span>Hotel Vista Cadiz</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#Madrid"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Madrid">
+         <span>Madrid</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#Malaga"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Malaga">
+         <span>Malaga</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#Metro"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Metro">
+         <span>Metro</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#Museo_Madrid"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Museo_Madrid">
+         <span>Museo Madrid</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#Palacio_Pamplona"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Palacio_Pamplona">
+         <span>Palacio Pamplona</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#Pamplona"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Pamplona">
+         <span>Pamplona</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#Restaurante_Delicia_Malaga"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurante_Delicia_Malaga">
+         <span>Restaurante Delicia Malaga</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#Restaurante_Delicia_Pamplona"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurante_Delicia_Pamplona">
+         <span>Restaurante Delicia Pamplona</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#Restaurante_Fusión_Valencia"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurante_Fusión_Valencia">
+         <span>Restaurante Fusión Valencia</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#Restaurante_Gourmet_Madrid"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurante_Gourmet_Madrid">
+         <span>Restaurante Gourmet Madrid</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#Restaurante_Tradicional_Toledo"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurante_Tradicional_Toledo">
+         <span>Restaurante Tradicional Toledo</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#San_Sebastián"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#San_Sebastián">
+         <span>San Sebastián</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#Sevilla"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Sevilla">
+         <span>Sevilla</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#Taxi"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Taxi">
+         <span>Taxi</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#Toledo"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Toledo">
+         <span>Toledo</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#Tranvia"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Tranvia">
+         <span>Tranvia</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#Valencia"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Valencia">
+         <span>Valencia</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/v1.0#Zaragoza"
+         title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Zaragoza">
+         <span>Zaragoza</span>
+      </a>
+   </li>
+</ul><h4> SWRL Rules </h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#d4e1978">PriceCategoryHigh-end</a>
+   </li>
+   <li>
+      <a href="#d4e2103">PriceCategoryMid-Range</a>
+   </li>
+   <li>
+      <a href="#d4e2269">PriceCategoryRuleBudget</a>
+   </li>
+   <li>
+      <a href="#d4e1541">RecommendedHotelRule</a>
+   </li>
+   <li>
+      <a href="#d4e1854">S1</a>
+   </li>
+   <li>
+      <a href="#d4e1730">S2</a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">Tourism and recomendations: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">This ontology aims to formally model the domain of smart tourism, including tourist events, hotel offerings, attractions, and restaurants in various cities. It is designed to structure, analyze, and reuse tourism-related information to support personalized recommendations of destinations and services. The ontology will define key tourism concepts and their relationships, enabling knowledge inference from available data.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for Tourism and recomendations classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Tourism and recomendations.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#/v1.0#Beach" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Beach">Beach</a></li>
+  <li><a href="#/v1.0#Bike" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bike">Bike</a></li>
+  <li><a href="#/v1.0#Bus" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bus">Bus</a></li>
+  <li><a href="#/v1.0#City" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#City">City</a></li>
+  <li><a href="#/v1.0#CulturalAttraction" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#CulturalAttraction">CulturalAttraction</a></li>
+  <li><a href="#/v1.0#Event" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Event">Event</a></li>
+  <li><a href="#/v1.0#FoodEstablishment" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#FoodEstablishment">FoodEstablishment</a></li>
+  <li><a href="#/v1.0#Hotel" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel">Hotel</a></li>
+  <li><a href="#/v1.0#Monument" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Monument">Monument</a></li>
+  <li><a href="#/v1.0#Museum" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Museum">Museum</a></li>
+  <li><a href="#/v1.0#Park" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Park">Park</a></li>
+  <li><a href="#/v1.0#Place" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Place">Place</a></li>
+  <li><a href="#/v1.0#Restaurant" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurant">Restaurant</a></li>
+  <li><a href="#/v1.0#Settlement" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Settlement">Settlement</a></li>
+  <li><a href="#/v1.0#Subway" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Subway">Subway</a></li>
+  <li><a href="#/v1.0#Taxi" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Taxi"> <span>Taxi</span> </a></li>
+  <li><a href="#/v1.0#TouristAsset" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#TouristAsset">TouristAsset</a></li>
+  <li><a href="#/v1.0#TouristAttraction" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#TouristAttraction">TouristAttraction</a></li>
+  <li><a href="#/v1.0#Tram" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Tram">Tram</a></li>
+  <li><a href="#/v1.0#Transport" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Transport">Transport</a></li>
+ </ul>
+ <div class="entity" id="/v1.0#Beach">
+  <h3>Beach<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Beach</p>
+  <div class="comment">
+   <span class="markdown">A sandy or pebbly area beside a body of water, popular for recreation</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/v1.0#TouristAttraction" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#TouristAttraction">TouristAttraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/v1.0#Castillo_Cadiz" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Castillo_Cadiz">Castillo Cadiz</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#/v1.0#CulturalAttraction" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#CulturalAttraction">CulturalAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Monument" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Monument">Monument</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Museum" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Museum">Museum</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Park" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Park">Park</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Bike">
+  <h3>Bike<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bike</p>
+  <div class="comment">
+   <span class="markdown">A human-powered vehicle with two wheels, used for individual urban or recreational transport</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/v1.0#Transport" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/v1.0#Bicicleta_Pública" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bicicleta_Pública">Bicicleta Pública</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#/v1.0#Bus" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bus">Bus</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Subway" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Subway">Subway</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Taxi" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Taxi">Taxi</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Tram" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Tram">Tram</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Bus">
+  <h3>Bus<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bus</p>
+  <div class="comment">
+   <span class="markdown">A large motor vehicle that carries passengers by road, typically along a fixed route</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/v1.0#Transport" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/v1.0#Autobus" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Autobus">Autobus</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#/v1.0#Bike" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bike">Bike</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Subway" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Subway">Subway</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Taxi" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Taxi">Taxi</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Tram" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Tram">Tram</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#City">
+  <h3>City<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#City</p>
+  <div class="comment">
+   <span class="markdown">Urban area with a high population density and significant infrastructure and services</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/v1.0#Settlement" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Settlement">Settlement</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#/v1.0#hasLocation" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasLocation">has Location</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#/v1.0#availableIn" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#availableIn">availableIn</a> <sup class="type-op" title="object property">op</sup>, <a href="#/v1.0#occursIn" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#occursIn">occursIn</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/v1.0#Barcelona" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Barcelona">Barcelona</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#/v1.0#Bilbao" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bilbao">Bilbao</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#/v1.0#Cadiz" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Cadiz">Cadiz</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#/v1.0#Madrid" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Madrid">Madrid</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#/v1.0#Malaga" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Malaga">Malaga</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#/v1.0#Pamplona" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Pamplona">Pamplona</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#/v1.0#San_Sebastián" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#San_Sebastián">San Sebastián</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#/v1.0#Sevilla" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Sevilla">Sevilla</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#/v1.0#Toledo" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Toledo">Toledo</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#/v1.0#Valencia" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Valencia">Valencia</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#/v1.0#Zaragoza" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Zaragoza">Zaragoza</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#CulturalAttraction">
+  <h3>CulturalAttraction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#CulturalAttraction</p>
+  <div class="comment">
+   <span class="markdown">A tourist site of cultural significance, such as theaters, heritage sites, or historical buildings</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/v1.0#TouristAttraction" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#TouristAttraction">TouristAttraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/v1.0#Palacio_Pamplona" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Palacio_Pamplona">Palacio Pamplona</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#/v1.0#Beach" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Beach">Beach</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Monument" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Monument">Monument</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Museum" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Museum">Museum</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Park" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Park">Park</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Event">
+  <h3>Event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Event</p>
+  <div class="comment">
+   <span class="markdown">An occurrence such as a concert, festival, or exhibition that attracts tourists or locals</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#/v1.0#hasEventID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventID">has Event I D</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/v1.0#hasEventType" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventType">has Event Type</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/v1.0#hasDate" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasDate">hasDate</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/v1.0#hasEventName" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventName">hasEventName</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/v1.0#occursIn" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#occursIn">occursIn</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/v1.0#Carnaval_Cadiz" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Carnaval_Cadiz">Carnaval Cadiz</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#/v1.0#Carnaval_Sevilla" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Carnaval_Sevilla">Carnaval Sevilla</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#/v1.0#Congreso_Bilbao" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Congreso_Bilbao">Congreso Bilbao</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#/v1.0#Congreso_Cadiz" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Congreso_Cadiz">Congreso Cadiz</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#/v1.0#Feria_Toledo" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Feria_Toledo">Feria Toledo</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#/v1.0#Place" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Place">Place</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Transport" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#FoodEstablishment">
+  <h3>FoodEstablishment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#FoodEstablishment</p>
+  <div class="comment">
+   <span class="markdown">A place where food is prepared and served to the public, including restaurants, cafes, bars, or food stands</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/v1.0#Place" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Place">Place</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#/v1.0#Restaurant" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#/v1.0#Settlement" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Settlement">Settlement</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#TouristAsset" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#TouristAsset">TouristAsset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Hotel">
+  <h3>Hotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel</p>
+  <div class="comment">
+   <span class="markdown">A commercial establishment providing lodging, meals, and other guest services</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/v1.0#TouristAsset" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#TouristAsset">TouristAsset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#/v1.0#hasStarRating" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasStarRating">Indicates the number of stars</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/v1.0#hasHotelScore" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelScore">has Hotel Score</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/v1.0#hasHotelType" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelType">has Hotel Type</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/v1.0#hasHotelPrice" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelPrice">hasHotelPrice</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/v1.0#isRecomended" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#isRecomended">is Recomended</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/v1.0#Hotel_Palace_Zaragoza" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel_Palace_Zaragoza">Hotel Palace Zaragoza</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#/v1.0#Hotel_Royal_Bilbao" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel_Royal_Bilbao">Hotel Royal Bilbao</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#/v1.0#Hotel_Royal_Malaga" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel_Royal_Malaga">Hotel Royal Malaga</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#/v1.0#Hotel_Royal_Pamplona" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel_Royal_Pamplona">Hotel Royal Pamplona</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#/v1.0#Hotel_Vista_Cadiz" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel_Vista_Cadiz">Hotel Vista Cadiz</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#/v1.0#TouristAttraction" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#TouristAttraction">TouristAttraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Monument">
+  <h3>Monument<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Monument</p>
+  <div class="comment">
+   <span class="markdown">A structure or statue built to commemorate a notable person or event</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/v1.0#TouristAttraction" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#TouristAttraction">TouristAttraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/v1.0#Castillo_Sevilla" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Castillo_Sevilla">Castillo Sevilla</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#/v1.0#Beach" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Beach">Beach</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#CulturalAttraction" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#CulturalAttraction">CulturalAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Museum" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Museum">Museum</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Park" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Park">Park</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Museum">
+  <h3>Museum<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Museum</p>
+  <div class="comment">
+   <span class="markdown">An institution that conserves and displays objects of artistic, cultural, or scientific interest</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/v1.0#TouristAttraction" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#TouristAttraction">TouristAttraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/v1.0#Museo_Madrid" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Museo_Madrid">Museo Madrid</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#/v1.0#Beach" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Beach">Beach</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#CulturalAttraction" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#CulturalAttraction">CulturalAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Monument" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Monument">Monument</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Park" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Park">Park</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Park">
+  <h3>Park<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Park</p>
+  <div class="comment">
+   <span class="markdown">A public green area in a town, used for recreation and relaxation</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/v1.0#TouristAttraction" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#TouristAttraction">TouristAttraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/v1.0#Catedral_Cadiz" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Catedral_Cadiz">Catedral Cadiz</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#/v1.0#Beach" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Beach">Beach</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#CulturalAttraction" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#CulturalAttraction">CulturalAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Monument" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Monument">Monument</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Museum" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Museum">Museum</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Place">
+  <h3>Place<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Place</p>
+  <div class="comment">
+   <span class="markdown">A general location or area of interest that can be visited</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#/v1.0#FoodEstablishment" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#FoodEstablishment">FoodEstablishment</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Settlement" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Settlement">Settlement</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#TouristAsset" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#TouristAsset">TouristAsset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#/v1.0#hasPlaceID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID">has Place I D</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/v1.0#hasPlaceName" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName">hasPlaceName</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/v1.0#locatedIn" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn">locatedIn</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#/v1.0#locatedIn" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn">locatedIn</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#/v1.0#Event" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Event">Event</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Transport" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Restaurant">
+  <h3>Restaurant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurant</p>
+  <div class="comment">
+   <span class="markdown">An establishment that prepares and serves food and drinks to customers</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/v1.0#FoodEstablishment" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#FoodEstablishment">FoodEstablishment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#/v1.0#hasPriceCategory" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPriceCategory">has Price Category</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/v1.0#hasRestaurantScore" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantScore">has Restaurant Score</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/v1.0#hasServesCuisine" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasServesCuisine">has Serves Cuisine</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/v1.0#hasRestaurantPrice" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantPrice">hasRestaurantPrice</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/v1.0#Restaurante_Delicia_Malaga" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurante_Delicia_Malaga">Restaurante Delicia Malaga</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#/v1.0#Restaurante_Delicia_Pamplona" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurante_Delicia_Pamplona">Restaurante Delicia Pamplona</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#/v1.0#Restaurante_Fusión_Valencia" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurante_Fusión_Valencia">Restaurante Fusión Valencia</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#/v1.0#Restaurante_Gourmet_Madrid" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurante_Gourmet_Madrid">Restaurante Gourmet Madrid</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#/v1.0#Restaurante_Tradicional_Toledo" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurante_Tradicional_Toledo">Restaurante Tradicional Toledo</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Settlement">
+  <h3>Settlement<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Settlement</p>
+  <div class="comment">
+   <span class="markdown">A human settlement, such as a village, town, or small community, usually smaller than a city</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/v1.0#Place" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Place">Place</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#/v1.0#City" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#City">City</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#/v1.0#FoodEstablishment" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#FoodEstablishment">FoodEstablishment</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#TouristAsset" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#TouristAsset">TouristAsset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Subway">
+  <h3>Subway<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Subway</p>
+  <div class="comment">
+   <span class="markdown">An underground railway system used for urban passenger transport</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/v1.0#Transport" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/v1.0#Metro" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Metro">Metro</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#/v1.0#Bike" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bike">Bike</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Bus" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bus">Bus</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Taxi" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Taxi">Taxi</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Tram" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Tram">Tram</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Taxi">
+  <h3>Taxi<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Taxi</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/v1.0#Transport" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/v1.0#Taxi" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Taxi">Taxi</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#/v1.0#Bike" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bike">Bike</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Bus" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bus">Bus</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Subway" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Subway">Subway</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Tram" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Tram">Tram</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#/v1.0#Taxi">named individual</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#TouristAsset">
+  <h3>TouristAsset<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#TouristAsset</p>
+  <div class="comment">
+   <span class="markdown">A general resource or element of interest within the tourism domain, such as attractions, accommodations, or experiences</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/v1.0#Place" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Place">Place</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#/v1.0#Hotel" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#TouristAttraction" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#TouristAttraction">TouristAttraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#/v1.0#FoodEstablishment" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#FoodEstablishment">FoodEstablishment</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Settlement" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Settlement">Settlement</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#TouristAttraction">
+  <h3>TouristAttraction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#TouristAttraction</p>
+  <div class="comment">
+   <span class="markdown">A place of interest that draws visitors due to its cultural, historical, or natural value</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/v1.0#TouristAsset" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#TouristAsset">TouristAsset</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#/v1.0#Beach" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Beach">Beach</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#CulturalAttraction" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#CulturalAttraction">CulturalAttraction</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Monument" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Monument">Monument</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Museum" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Museum">Museum</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Park" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Park">Park</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#/v1.0#hasAttractionScore" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasAttractionScore">has Attraction Score</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#/v1.0#Hotel" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Tram">
+  <h3>Tram<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Tram</p>
+  <div class="comment">
+   <span class="markdown">A rail vehicle that runs on tracks along public urban streets, used for local transport</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#/v1.0#Transport" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#/v1.0#Tranvia" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Tranvia">Tranvia</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#/v1.0#Bike" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bike">Bike</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Bus" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bus">Bus</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Subway" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Subway">Subway</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Taxi" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Taxi">Taxi</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Transport">
+  <h3>Transport<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Transport</p>
+  <div class="comment">
+   <span class="markdown">Vehicles or systems used for moving from one place to another</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#/v1.0#Bike" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bike">Bike</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Bus" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bus">Bus</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Subway" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Subway">Subway</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Taxi" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Taxi">Taxi</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Tram" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Tram">Tram</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#/v1.0#availableIn" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#availableIn">availableIn</a> <sup class="type-op" title="object property">op</sup>, <a href="#/v1.0#hasProvider" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasProvider">has Provider</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/v1.0#hasTransportID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasTransportID">has Transport I D</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#/v1.0#hasTransportPrice" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasTransportPrice">has Transport Price</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#/v1.0#Event" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Event">Event</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Place" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Place">Place</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#/v1.0#availableIn" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#availableIn">availableIn</a></li>
+  <li><a href="#/v1.0#locatedIn" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn">locatedIn</a></li>
+  <li><a href="#/v1.0#occursIn" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#occursIn">occursIn</a></li>
+ </ul>
+ <div class="entity" id="/v1.0#availableIn">
+  <h3>availableIn<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#availableIn</p>
+  <div class="comment">
+   <span class="markdown">Relates a service where the place where you can use it</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/v1.0#Transport" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#/v1.0#City" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/v1.0#locatedIn">
+  <h3>locatedIn<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn</p>
+  <div class="comment">
+   <span class="markdown">Relates an entity to the place or geographical area where it is situated</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/v1.0#Place" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Place">Place</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#/v1.0#Place" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Place">Place</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/v1.0#occursIn">
+  <h3>occursIn<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#occursIn</p>
+  <div class="comment">
+   <span class="markdown">Relates an event or activity to the place where it takes place</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/v1.0#Event" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#/v1.0#City" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#/v1.0#hasAttractionScore" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasAttractionScore"> <span>has Attraction Score</span> </a></li>
+  <li><a href="#/v1.0#hasEventID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventID"> <span>has Event I D</span> </a></li>
+  <li><a href="#/v1.0#hasEventType" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventType"> <span>has Event Type</span> </a></li>
+  <li><a href="#/v1.0#hasHotelScore" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelScore"> <span>has Hotel Score</span> </a></li>
+  <li><a href="#/v1.0#hasHotelType" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelType"> <span>has Hotel Type</span> </a></li>
+  <li><a href="#/v1.0#hasLocation" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasLocation"> <span>has Location</span> </a></li>
+  <li><a href="#/v1.0#hasPlaceID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID"> <span>has Place I D</span> </a></li>
+  <li><a href="#/v1.0#hasPriceCategory" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPriceCategory"> <span>has Price Category</span> </a></li>
+  <li><a href="#/v1.0#hasProvider" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasProvider"> <span>has Provider</span> </a></li>
+  <li><a href="#/v1.0#hasRestaurantScore" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantScore"> <span>has Restaurant Score</span> </a></li>
+  <li><a href="#/v1.0#hasServesCuisine" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasServesCuisine"> <span>has Serves Cuisine</span> </a></li>
+  <li><a href="#/v1.0#hasTransportID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasTransportID"> <span>has Transport I D</span> </a></li>
+  <li><a href="#/v1.0#hasTransportPrice" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasTransportPrice"> <span>has Transport Price</span> </a></li>
+  <li><a href="#/v1.0#hasDate" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasDate">hasDate</a></li>
+  <li><a href="#/v1.0#hasEventName" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventName">hasEventName</a></li>
+  <li><a href="#/v1.0#hasHotelPrice" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelPrice">hasHotelPrice</a></li>
+  <li><a href="#/v1.0#hasPlaceName" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName">hasPlaceName</a></li>
+  <li><a href="#/v1.0#hasRestaurantPrice" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantPrice">hasRestaurantPrice</a></li>
+  <li><a href="#/v1.0#hasStarRating" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasStarRating">Indicates the number of stars</a></li>
+  <li><a href="#/v1.0#isRecomended" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#isRecomended"> <span>is Recomended</span> </a></li>
+ </ul>
+ <div class="entity" id="/v1.0#hasAttractionScore">
+  <h3>has Attraction Score<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasAttractionScore</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/v1.0#TouristAttraction" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#TouristAttraction">TouristAttraction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/v1.0#hasEventID">
+  <h3>has Event I D<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventID</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/v1.0#Event" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/v1.0#hasEventType">
+  <h3>has Event Type<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventType</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/v1.0#Event" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/v1.0#hasHotelScore">
+  <h3>has Hotel Score<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelScore</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/v1.0#Hotel" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/v1.0#hasHotelType">
+  <h3>has Hotel Type<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelType</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/v1.0#Hotel" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/v1.0#hasLocation">
+  <h3>has Location<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasLocation</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/v1.0#City" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/v1.0#hasPlaceID">
+  <h3>has Place I D<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/v1.0#Place" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Place">Place</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/v1.0#hasPriceCategory">
+  <h3>has Price Category<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPriceCategory</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/v1.0#Restaurant" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/v1.0#hasProvider">
+  <h3>has Provider<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasProvider</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/v1.0#Transport" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/v1.0#hasRestaurantScore">
+  <h3>has Restaurant Score<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantScore</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/v1.0#Restaurant" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/v1.0#hasServesCuisine">
+  <h3>has Serves Cuisine<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasServesCuisine</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/v1.0#Restaurant" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/v1.0#hasTransportID">
+  <h3>has Transport I D<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasTransportID</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/v1.0#Transport" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/v1.0#hasTransportPrice">
+  <h3>has Transport Price<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasTransportPrice</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/v1.0#Transport" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Transport">Transport</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/v1.0#hasDate">
+  <h3>hasDate<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasDate</p>
+  <div class="comment">
+   <span class="markdown">Indicates de Date when something happens</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/v1.0#Event" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/v1.0#hasEventName">
+  <h3>hasEventName<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventName</p>
+  <div class="comment">
+   <span class="markdown">Specifies the name or title of an entity</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/v1.0#Event" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/v1.0#hasHotelPrice">
+  <h3>hasHotelPrice<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelPrice</p>
+  <div class="comment">
+   <span class="markdown">Indicates the monetary value or cost associated with an entity</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/v1.0#Hotel" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/v1.0#hasPlaceName">
+  <h3>hasPlaceName<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName</p>
+  <div class="comment">
+   <span class="markdown">Specifies the name or title of an entity</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#topDataProperty" target="_blank" title="http://www.w3.org/2002/07/owl#topDataProperty">top Data Property</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/v1.0#Place" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Place">Place</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/v1.0#hasRestaurantPrice">
+  <h3>hasRestaurantPrice<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantPrice</p>
+  <div class="comment">
+   <span class="markdown">Indicates the monetary value or cost associated with an entity</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/v1.0#Restaurant" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/v1.0#hasStarRating">
+  <h3>Indicates the number of stars<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasStarRating</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/v1.0#Hotel" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#int" target="_blank" title="http://www.w3.org/2001/XMLSchema#int">int</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="/v1.0#isRecomended">
+  <h3>is Recomended<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#isRecomended</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#/v1.0#Hotel" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="annotationproperties">
+ <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" title="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"> <span>is Rule Enabled</span> </a></li>
+  <li><a href="#http://www.w3.org/2000/01/rdf-schema#title" title="http://www.w3.org/2000/01/rdf-schema#title"> <span>title</span> </a></li>
+ </ul>
+ <div class="entity" id="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled">
+  <h3>is Rule Enabled<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2000/01/rdf-schema#title">
+  <h3>title<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2000/01/rdf-schema#title</p>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#/v1.0#Autobus" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Autobus"> <span>Autobus</span> </a></li>
+  <li><a href="#/v1.0#Barcelona" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Barcelona"> <span>Barcelona</span> </a></li>
+  <li><a href="#/v1.0#Bicicleta_Pública" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bicicleta_Pública"> <span>Bicicleta Pública</span> </a></li>
+  <li><a href="#/v1.0#Bilbao" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bilbao"> <span>Bilbao</span> </a></li>
+  <li><a href="#/v1.0#Cadiz" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Cadiz"> <span>Cadiz</span> </a></li>
+  <li><a href="#/v1.0#Carnaval_Cadiz" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Carnaval_Cadiz"> <span>Carnaval Cadiz</span> </a></li>
+  <li><a href="#/v1.0#Carnaval_Sevilla" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Carnaval_Sevilla"> <span>Carnaval Sevilla</span> </a></li>
+  <li><a href="#/v1.0#Castillo_Cadiz" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Castillo_Cadiz"> <span>Castillo Cadiz</span> </a></li>
+  <li><a href="#/v1.0#Castillo_Sevilla" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Castillo_Sevilla"> <span>Castillo Sevilla</span> </a></li>
+  <li><a href="#/v1.0#Catedral_Cadiz" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Catedral_Cadiz"> <span>Catedral Cadiz</span> </a></li>
+  <li><a href="#/v1.0#Congreso_Bilbao" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Congreso_Bilbao"> <span>Congreso Bilbao</span> </a></li>
+  <li><a href="#/v1.0#Congreso_Cadiz" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Congreso_Cadiz"> <span>Congreso Cadiz</span> </a></li>
+  <li><a href="#/v1.0#Feria_Toledo" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Feria_Toledo"> <span>Feria Toledo</span> </a></li>
+  <li><a href="#/v1.0#Hotel_Palace_Zaragoza" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel_Palace_Zaragoza"> <span>Hotel Palace Zaragoza</span> </a></li>
+  <li><a href="#/v1.0#Hotel_Royal_Bilbao" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel_Royal_Bilbao"> <span>Hotel Royal Bilbao</span> </a></li>
+  <li><a href="#/v1.0#Hotel_Royal_Malaga" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel_Royal_Malaga"> <span>Hotel Royal Malaga</span> </a></li>
+  <li><a href="#/v1.0#Hotel_Royal_Pamplona" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel_Royal_Pamplona"> <span>Hotel Royal Pamplona</span> </a></li>
+  <li><a href="#/v1.0#Hotel_Vista_Cadiz" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel_Vista_Cadiz"> <span>Hotel Vista Cadiz</span> </a></li>
+  <li><a href="#/v1.0#Madrid" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Madrid"> <span>Madrid</span> </a></li>
+  <li><a href="#/v1.0#Malaga" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Malaga"> <span>Malaga</span> </a></li>
+  <li><a href="#/v1.0#Metro" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Metro"> <span>Metro</span> </a></li>
+  <li><a href="#/v1.0#Museo_Madrid" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Museo_Madrid"> <span>Museo Madrid</span> </a></li>
+  <li><a href="#/v1.0#Palacio_Pamplona" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Palacio_Pamplona"> <span>Palacio Pamplona</span> </a></li>
+  <li><a href="#/v1.0#Pamplona" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Pamplona"> <span>Pamplona</span> </a></li>
+  <li><a href="#/v1.0#Restaurante_Delicia_Malaga" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurante_Delicia_Malaga"> <span>Restaurante Delicia Malaga</span> </a></li>
+  <li><a href="#/v1.0#Restaurante_Delicia_Pamplona" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurante_Delicia_Pamplona"> <span>Restaurante Delicia Pamplona</span> </a></li>
+  <li><a href="#/v1.0#Restaurante_Fusión_Valencia" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurante_Fusión_Valencia"> <span>Restaurante Fusión Valencia</span> </a></li>
+  <li><a href="#/v1.0#Restaurante_Gourmet_Madrid" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurante_Gourmet_Madrid"> <span>Restaurante Gourmet Madrid</span> </a></li>
+  <li><a href="#/v1.0#Restaurante_Tradicional_Toledo" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurante_Tradicional_Toledo"> <span>Restaurante Tradicional Toledo</span> </a></li>
+  <li><a href="#/v1.0#San_Sebastián" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#San_Sebastián"> <span>San Sebastián</span> </a></li>
+  <li><a href="#/v1.0#Sevilla" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Sevilla"> <span>Sevilla</span> </a></li>
+  <li><a href="#/v1.0#Taxi" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Taxi"> <span>Taxi</span> </a></li>
+  <li><a href="#/v1.0#Toledo" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Toledo"> <span>Toledo</span> </a></li>
+  <li><a href="#/v1.0#Tranvia" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Tranvia"> <span>Tranvia</span> </a></li>
+  <li><a href="#/v1.0#Valencia" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Valencia"> <span>Valencia</span> </a></li>
+  <li><a href="#/v1.0#Zaragoza" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Zaragoza"> <span>Zaragoza</span> </a></li>
+ </ul>
+ <div class="entity" id="/v1.0#Autobus">
+  <h3>Autobus<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Autobus</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#Bus" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bus">Bus</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#availableIn" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#availableIn">availableIn</a> <sup class="type-op" title="object property">op</sup> <a href="#/v1.0#Zaragoza" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Zaragoza">Zaragoza</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasProvider" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasProvider">has Provider</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"City Zaragoza"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasTransportID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasTransportID">has Transport I D</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasTransportPrice" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasTransportPrice">has Transport Price</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"5.79"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Barcelona">
+  <h3>Barcelona<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Barcelona</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#City" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#City">City</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#hasLocation" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasLocation">has Location</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"41.3874,2.1686"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID">has Place I D</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceName" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName">hasPlaceName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Barcelona"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Bicicleta_Pública">
+  <h3>Bicicleta Pública<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bicicleta_Pública</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#Bike" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bike">Bike</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#availableIn" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#availableIn">availableIn</a> <sup class="type-op" title="object property">op</sup> <a href="#/v1.0#Cadiz" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Cadiz">Cadiz</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasProvider" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasProvider">has Provider</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"City Cadiz"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasTransportPrice" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasTransportPrice">has Transport Price</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"9.86"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Bilbao">
+  <h3>Bilbao<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bilbao</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#City" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#City">City</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#hasLocation" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasLocation">has Location</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"43.2630,-2.9350"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID">has Place I D</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"6"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceName" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName">hasPlaceName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Bilbao"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Cadiz">
+  <h3>Cadiz<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Cadiz</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#City" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#City">City</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#hasLocation" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasLocation">has Location</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"36.5297,-6.2920"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID">has Place I D</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"9"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceName" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName">hasPlaceName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Cadiz"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Carnaval_Cadiz">
+  <h3>Carnaval Cadiz<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Carnaval_Cadiz</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#Event" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#occursIn" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#occursIn">occursIn</a> <sup class="type-op" title="object property">op</sup> <a href="#/v1.0#Cadiz" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Cadiz">Cadiz</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasDate" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasDate">hasDate</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"19/04/2024"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasEventID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventID">has Event I D</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasEventName" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventName">hasEventName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Carnaval Cadiz"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasEventType" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventType">has Event Type</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Deportivo"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Carnaval_Sevilla">
+  <h3>Carnaval Sevilla<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Carnaval_Sevilla</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#Event" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#occursIn" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#occursIn">occursIn</a> <sup class="type-op" title="object property">op</sup> <a href="#/v1.0#Sevilla" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Sevilla">Sevilla</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasDate" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasDate">hasDate</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"08/05/2024"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasEventID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventID">has Event I D</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasEventName" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventName">hasEventName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Carnaval Sevilla"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasEventType" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventType">has Event Type</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Música"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Castillo_Cadiz">
+  <h3>Castillo Cadiz<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Castillo_Cadiz</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#Beach" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Beach">Beach</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#locatedIn" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn">locatedIn</a> <sup class="type-op" title="object property">op</sup> <a href="#/v1.0#Cadiz" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Cadiz">Cadiz</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasAttractionScore" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasAttractionScore">has Attraction Score</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"3.5"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID">has Place I D</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceName" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName">hasPlaceName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Castillo Cadiz"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Castillo_Sevilla">
+  <h3>Castillo Sevilla<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Castillo_Sevilla</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#Monument" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Monument">Monument</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#locatedIn" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn">locatedIn</a> <sup class="type-op" title="object property">op</sup> <a href="#/v1.0#Sevilla" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Sevilla">Sevilla</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasAttractionScore" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasAttractionScore">has Attraction Score</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4.6"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID">has Place I D</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceName" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName">hasPlaceName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Castillo Sevilla"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Catedral_Cadiz">
+  <h3>Catedral Cadiz<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Catedral_Cadiz</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#Park" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Park">Park</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#locatedIn" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn">locatedIn</a> <sup class="type-op" title="object property">op</sup> <a href="#/v1.0#Cadiz" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Cadiz">Cadiz</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasAttractionScore" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasAttractionScore">has Attraction Score</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4.4"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID">has Place I D</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceName" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName">hasPlaceName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Catedral Cadiz"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Congreso_Bilbao">
+  <h3>Congreso Bilbao<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Congreso_Bilbao</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#Event" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#occursIn" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#occursIn">occursIn</a> <sup class="type-op" title="object property">op</sup> <a href="#/v1.0#Bilbao" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bilbao">Bilbao</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasDate" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasDate">hasDate</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"01/12/2024"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasEventID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventID">has Event I D</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"3"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasEventName" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventName">hasEventName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Congreso Bilbao"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasEventType" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventType">has Event Type</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Cultural"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Congreso_Cadiz">
+  <h3>Congreso Cadiz<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Congreso_Cadiz</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#Event" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#occursIn" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#occursIn">occursIn</a> <sup class="type-op" title="object property">op</sup> <a href="#/v1.0#Cadiz" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Cadiz">Cadiz</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasDate" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasDate">hasDate</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"02/06/2024"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasEventID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventID">has Event I D</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasEventName" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventName">hasEventName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Congreso Cadiz"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasEventType" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventType">has Event Type</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Deportivo"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Feria_Toledo">
+  <h3>Feria Toledo<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Feria_Toledo</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#Event" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#occursIn" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#occursIn">occursIn</a> <sup class="type-op" title="object property">op</sup> <a href="#/v1.0#Toledo" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Toledo">Toledo</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasDate" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasDate">hasDate</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"26/08/2024"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasEventID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventID">has Event I D</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"5"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasEventName" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventName">hasEventName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Feria Toledo"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasEventType" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventType">has Event Type</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Deportivo"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Hotel_Palace_Zaragoza">
+  <h3>Hotel Palace Zaragoza<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel_Palace_Zaragoza</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#Hotel" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#locatedIn" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn">locatedIn</a> <sup class="type-op" title="object property">op</sup> <a href="#/v1.0#Zaragoza" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Zaragoza">Zaragoza</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasHotelPrice" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelPrice">hasHotelPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"120"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasHotelScore" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelScore">has Hotel Score</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"3.8"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasHotelType" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelType">has Hotel Type</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Lujo"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID">has Place I D</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"5"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceName" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName">hasPlaceName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Hotel Palace Zaragoza"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasStarRating" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasStarRating">Indicates the number of stars</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Hotel_Royal_Bilbao">
+  <h3>Hotel Royal Bilbao<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel_Royal_Bilbao</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#Hotel" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#locatedIn" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn">locatedIn</a> <sup class="type-op" title="object property">op</sup> <a href="#/v1.0#Bilbao" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bilbao">Bilbao</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasHotelPrice" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelPrice">hasHotelPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"232"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasHotelScore" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelScore">has Hotel Score</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"3.6"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasHotelType" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelType">has Hotel Type</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Turistico"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID">has Place I D</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceName" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName">hasPlaceName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Hotel Royal Bilbao"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasStarRating" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasStarRating">Indicates the number of stars</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"3"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Hotel_Royal_Malaga">
+  <h3>Hotel Royal Malaga<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel_Royal_Malaga</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#Hotel" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#locatedIn" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn">locatedIn</a> <sup class="type-op" title="object property">op</sup> <a href="#/v1.0#Malaga" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Malaga">Malaga</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasHotelPrice" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelPrice">hasHotelPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"175"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasHotelScore" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelScore">has Hotel Score</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4.6"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasHotelType" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelType">has Hotel Type</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Turistico"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID">has Place I D</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"3"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceName" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName">hasPlaceName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Hotel Royal Malaga"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasStarRating" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasStarRating">Indicates the number of stars</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"5"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Hotel_Royal_Pamplona">
+  <h3>Hotel Royal Pamplona<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel_Royal_Pamplona</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#Hotel" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#locatedIn" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn">locatedIn</a> <sup class="type-op" title="object property">op</sup> <a href="#/v1.0#Sevilla" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Sevilla">Sevilla</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasHotelPrice" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelPrice">hasHotelPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"56"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasHotelScore" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelScore">has Hotel Score</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"3.9"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasHotelType" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelType">has Hotel Type</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Lujo"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID">has Place I D</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceName" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName">hasPlaceName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Hotel Royal Pamplona"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasStarRating" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasStarRating">Indicates the number of stars</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"3"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Hotel_Vista_Cadiz">
+  <h3>Hotel Vista Cadiz<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel_Vista_Cadiz</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#Hotel" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#locatedIn" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn">locatedIn</a> <sup class="type-op" title="object property">op</sup> <a href="#/v1.0#Cadiz" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Cadiz">Cadiz</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasHotelPrice" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelPrice">hasHotelPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"150"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasHotelScore" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelScore">has Hotel Score</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasHotelType" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelType">has Hotel Type</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Playa"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID">has Place I D</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceName" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName">hasPlaceName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Hotel Vista Cadiz"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasStarRating" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasStarRating">Indicates the number of stars</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Madrid">
+  <h3>Madrid<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Madrid</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#City" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#City">City</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#hasLocation" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasLocation">has Location</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"40.4168,-3.7038"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID">has Place I D</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"3"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceName" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName">hasPlaceName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Madrid"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Malaga">
+  <h3>Malaga<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Malaga</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#City" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#City">City</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#hasLocation" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasLocation">has Location</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"36.7213,-4.4210"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID">has Place I D</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"11"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceName" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName">hasPlaceName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Malaga"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Metro">
+  <h3>Metro<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Metro</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#Subway" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Subway">Subway</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#availableIn" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#availableIn">availableIn</a> <sup class="type-op" title="object property">op</sup> <a href="#/v1.0#Madrid" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Madrid">Madrid</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasProvider" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasProvider">has Provider</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Urban Madrid"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasTransportID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasTransportID">has Transport I D</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasTransportPrice" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasTransportPrice">has Transport Price</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"8.85"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Museo_Madrid">
+  <h3>Museo Madrid<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Museo_Madrid</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#Museum" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Museum">Museum</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#locatedIn" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn">locatedIn</a> <sup class="type-op" title="object property">op</sup> <a href="#/v1.0#Madrid" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Madrid">Madrid</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasAttractionScore" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasAttractionScore">has Attraction Score</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"3.7"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID">has Place I D</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceName" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName">hasPlaceName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Museo Madrid"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Palacio_Pamplona">
+  <h3>Palacio Pamplona<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Palacio_Pamplona</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#CulturalAttraction" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#CulturalAttraction">CulturalAttraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#locatedIn" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn">locatedIn</a> <sup class="type-op" title="object property">op</sup> <a href="#/v1.0#Pamplona" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Pamplona">Pamplona</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasAttractionScore" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasAttractionScore">has Attraction Score</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID">has Place I D</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceName" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName">hasPlaceName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Palacio Pamplona"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Pamplona">
+  <h3>Pamplona<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Pamplona</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#City" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#City">City</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#hasLocation" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasLocation">has Location</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"42.8169,-1.6444"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID">has Place I D</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"7"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceName" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName">hasPlaceName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Plamplona"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Restaurante_Delicia_Malaga">
+  <h3>Restaurante Delicia Malaga<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurante_Delicia_Malaga</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#Restaurant" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#locatedIn" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn">locatedIn</a> <sup class="type-op" title="object property">op</sup> <a href="#/v1.0#Malaga" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Malaga">Malaga</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID">has Place I D</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceName" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName">hasPlaceName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Restaurante Delicia Malaga"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasRestaurantPrice" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantPrice">hasRestaurantPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"38"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasRestaurantScore" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantScore">has Restaurant Score</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4.9"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasServesCuisine" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasServesCuisine">has Serves Cuisine</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Japonesa"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Restaurante_Delicia_Pamplona">
+  <h3>Restaurante Delicia Pamplona<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurante_Delicia_Pamplona</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#Restaurant" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#locatedIn" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn">locatedIn</a> <sup class="type-op" title="object property">op</sup> <a href="#/v1.0#Pamplona" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Pamplona">Pamplona</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID">has Place I D</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"5"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceName" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName">hasPlaceName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Restaurante Delicia Pamplona"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasRestaurantPrice" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantPrice">hasRestaurantPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"36"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasRestaurantScore" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantScore">has Restaurant Score</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4.9"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasServesCuisine" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasServesCuisine">has Serves Cuisine</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Mexicana"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Restaurante_Fusión_Valencia">
+  <h3>Restaurante Fusión Valencia<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurante_Fusión_Valencia</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#Restaurant" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#locatedIn" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn">locatedIn</a> <sup class="type-op" title="object property">op</sup> <a href="#/v1.0#Valencia" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Valencia">Valencia</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID">has Place I D</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"3"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceName" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName">hasPlaceName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Restaurante Fusión Valencia"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasRestaurantPrice" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantPrice">hasRestaurantPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"13"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasRestaurantScore" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantScore">has Restaurant Score</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4.2"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasServesCuisine" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasServesCuisine">has Serves Cuisine</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Andaluza"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Restaurante_Gourmet_Madrid">
+  <h3>Restaurante Gourmet Madrid<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurante_Gourmet_Madrid</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#Restaurant" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#locatedIn" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn">locatedIn</a> <sup class="type-op" title="object property">op</sup> <a href="#/v1.0#Madrid" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Madrid">Madrid</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID">has Place I D</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceName" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName">hasPlaceName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Restaurante Gourmet Madrid"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasRestaurantPrice" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantPrice">hasRestaurantPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"30"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasRestaurantScore" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantScore">has Restaurant Score</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"4.8"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasServesCuisine" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasServesCuisine">has Serves Cuisine</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Japonesa"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Restaurante_Tradicional_Toledo">
+  <h3>Restaurante Tradicional Toledo<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurante_Tradicional_Toledo</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#Restaurant" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#locatedIn" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn">locatedIn</a> <sup class="type-op" title="object property">op</sup> <a href="#/v1.0#Toledo" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Toledo">Toledo</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID">has Place I D</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceName" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName">hasPlaceName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Restaurante Tradicional Toledo"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasRestaurantPrice" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantPrice">hasRestaurantPrice</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"46"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasRestaurantScore" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantScore">has Restaurant Score</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"3.7"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasServesCuisine" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasServesCuisine">has Serves Cuisine</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Mexicana"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#San_Sebastián">
+  <h3>San Sebastián<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#San_Sebastián</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#City" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#City">City</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#hasLocation" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasLocation">has Location</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"43.3183,-1.9812"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID">has Place I D</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"8"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceName" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName">hasPlaceName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"San Sebastian"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Sevilla">
+  <h3>Sevilla<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Sevilla</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#City" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#City">City</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#hasLocation" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasLocation">has Location</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"37.3886,-5.9823"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID">has Place I D</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"10"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceName" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName">hasPlaceName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Sevilla"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Taxi">
+  <h3>Taxi<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Taxi</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#Taxi" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Taxi">Taxi</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#/v1.0#Bike" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bike">Bike</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Bus" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bus">Bus</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Subway" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Subway">Subway</a> <sup class="type-c" title="class">c</sup>, <a href="#/v1.0#Tram" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Tram">Tram</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#availableIn" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#availableIn">availableIn</a> <sup class="type-op" title="object property">op</sup> <a href="#/v1.0#Bilbao" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bilbao">Bilbao</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasProvider" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasProvider">has Provider</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Trans Bilbao"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasTransportID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasTransportID">has Transport I D</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasTransportPrice" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasTransportPrice">has Transport Price</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"5.75"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#/v1.0#Taxi">class</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Toledo">
+  <h3>Toledo<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Toledo</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#City" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#City">City</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#hasLocation" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasLocation">has Location</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"39.8628,-4.0273"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID">has Place I D</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceName" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName">hasPlaceName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Toledo"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Tranvia">
+  <h3>Tranvia<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Tranvia</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#Tram" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Tram">Tram</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#availableIn" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#availableIn">availableIn</a> <sup class="type-op" title="object property">op</sup> <a href="#/v1.0#Toledo" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Toledo">Toledo</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasProvider" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasProvider">has Provider</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Trans Toledo"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasTransportID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasTransportID">has Transport I D</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"1"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasTransportPrice" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasTransportPrice">has Transport Price</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"3.61"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Valencia">
+  <h3>Valencia<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Valencia</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#City" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#City">City</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#hasLocation" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasLocation">has Location</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"39.4699,-0.3763"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID">has Place I D</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceName" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName">hasPlaceName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Valencia"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="/v1.0#Zaragoza">
+  <h3>Zaragoza<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Zaragoza</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#/v1.0#City" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#City">City</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#/v1.0#hasLocation" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasLocation">has Location</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"41.6488,-0.8891"</span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceID" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID">has Place I D</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"5"^^<a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a> </span>
+   </dd>
+   <dd>
+    <a href="#/v1.0#hasPlaceName" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName">hasPlaceName</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Zaragoza"</span>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="swrlrules">
+ <h3 id="swrlrules" class="list">SWRL rules</h3>
+ <ul class="hlist">
+  <li><a href="#d4e1978">PriceCategoryHigh-end</a></li>
+  <li><a href="#d4e2103">PriceCategoryMid-Range</a></li>
+  <li><a href="#d4e2269">PriceCategoryRuleBudget</a></li>
+  <li><a href="#d4e1541">RecommendedHotelRule</a></li>
+  <li><a href="#d4e1854">S1</a></li>
+  <li><a href="#d4e1730">S2</a></li>
+ </ul>
+ <div class="entity" id="d4e1978">
+  <h3>PriceCategoryHigh-end<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p>If restaurant price is more than 15, then its category is High-end<br><br><a href="#/v1.0#hasRestaurantPrice" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantPrice">hasRestaurantPrice</a> <sup class="type-dp" title="data property">dp</sup>(?,?) , <a href="#/v1.0#Restaurant" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>(?) , <a href="http://www.w3.org/2003/11/swrlb#greaterThan" title="greaterThan">greaterThan</a>(?) -&gt; <a href="#/v1.0#hasPriceCategory" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPriceCategory">has Price Category</a> <sup class="type-dp" title="data property">dp</sup>(?,"High-end")</p>
+ </div>
+ <div class="entity" id="d4e2103">
+  <h3>PriceCategoryMid-Range<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p>If restaurant price is more than 15 and less or equal to 40, then its category is Mid--Range<br><br><a href="#/v1.0#hasRestaurantPrice" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantPrice">hasRestaurantPrice</a> <sup class="type-dp" title="data property">dp</sup>(?,?) , <a href="http://www.w3.org/2003/11/swrlb#greaterThan" title="greaterThan">greaterThan</a>(?) , <a href="http://www.w3.org/2003/11/swrlb#lessThanOrEqual" title="lessThanOrEqual">lessThanOrEqual</a>(?) , <a href="#/v1.0#Restaurant" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>(?) -&gt; <a href="#/v1.0#hasPriceCategory" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPriceCategory">has Price Category</a> <sup class="type-dp" title="data property">dp</sup>(?,"Mid-range")</p>
+ </div>
+ <div class="entity" id="d4e2269">
+  <h3>PriceCategoryRuleBudget<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p>If restaurant price is less than 15, then its category is Budget<br><br><a href="#/v1.0#hasRestaurantPrice" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantPrice">hasRestaurantPrice</a> <sup class="type-dp" title="data property">dp</sup>(?,?) , <a href="http://www.w3.org/2003/11/swrlb#lessThanOrEqual" title="lessThanOrEqual">lessThanOrEqual</a>(?) , <a href="#/v1.0#Restaurant" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>(?) -&gt; <a href="#/v1.0#hasPriceCategory" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPriceCategory">has Price Category</a> <sup class="type-dp" title="data property">dp</sup>(?,"Budget")</p>
+ </div>
+ <div class="entity" id="d4e1541">
+  <h3>RecommendedHotelRule<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p>If a hotel has four o more stars and its score is greater than 4, then is a recommended hotel<br><br><a href="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual" title="greaterThanOrEqual">greaterThanOrEqual</a>(?) , <a href="#/v1.0#hasStarRating" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasStarRating">Indicates the number of stars</a> <sup class="type-dp" title="data property">dp</sup>(?,?) , <a href="#/v1.0#hasHotelScore" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelScore">has Hotel Score</a> <sup class="type-dp" title="data property">dp</sup>(?,?) , <a href="#/v1.0#Hotel" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>(?) , <a href="http://www.w3.org/2003/11/swrlb#greaterThan" title="greaterThan">greaterThan</a>(?) -&gt; <a href="#/v1.0#isRecomended" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#isRecomended">is Recomended</a> <sup class="type-dp" title="data property">dp</sup>(?,"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>)</p>
+ </div>
+ <div class="entity" id="d4e1854">
+  <h3>S1<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p><br><br><a href="#/v1.0#hasStarRating" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasStarRating">Indicates the number of stars</a> <sup class="type-dp" title="data property">dp</sup>(?,?) , <a href="http://www.w3.org/2003/11/swrlb#lessThan" title="lessThan">lessThan</a>(?) , <a href="#/v1.0#Hotel" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>(?) -&gt; <a href="#/v1.0#isRecomended" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#isRecomended">is Recomended</a> <sup class="type-dp" title="data property">dp</sup>(?,"false"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>)</p>
+ </div>
+ <div class="entity" id="d4e1730">
+  <h3>S2<span class="backlink">back to <a href="#toc">ToC</a> or <a href="#swrlrules">SWRL ToC</a> </span></h3>
+  <p><br><br><a href="#/v1.0#hasHotelScore" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelScore">has Hotel Score</a> <sup class="type-dp" title="data property">dp</sup>(?,?) , <a href="http://www.w3.org/2003/11/swrlb#lessThanOrEqual" title="lessThanOrEqual">lessThanOrEqual</a>(?) , <a href="#/v1.0#Hotel" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>(?) -&gt; <a href="#/v1.0#isRecomended" title="http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#isRecomended">is Recomended</a> <sup class="type-dp" title="data property">dp</sup>(?,"false"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>)</p>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

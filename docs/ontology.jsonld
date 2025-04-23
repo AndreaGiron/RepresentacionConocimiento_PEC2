@@ -1,0 +1,2002 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelPrice"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid2"
+  } ]
+}, {
+  "@id" : "_:genid100",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/r"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurant"
+  } ]
+}, {
+  "@id" : "_:genid102",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#BuiltinAtom" ],
+  "http://www.w3.org/2003/11/swrl#arguments" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/p"
+    }, {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@value" : "15"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#builtin" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrlb#lessThanOrEqual"
+  } ]
+}, {
+  "@id" : "_:genid106",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/r"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/p"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantPrice"
+  } ]
+}, {
+  "@id" : "_:genid108",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/r"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@value" : "Budget"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPriceCategory"
+  } ]
+}, {
+  "@id" : "_:genid109",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
+  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "If a hotel has four o more stars and its score is greater than 4, then is a recommended hotel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "RecommendedHotelRule"
+  } ],
+  "http://www.w3.org/2003/11/swrl#body" : [ {
+    "@list" : [ {
+      "@id" : "_:genid121"
+    }, {
+      "@id" : "_:genid119"
+    }, {
+      "@id" : "_:genid117"
+    }, {
+      "@id" : "_:genid115"
+    }, {
+      "@id" : "_:genid111"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#head" : [ {
+    "@list" : [ {
+      "@id" : "_:genid125"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid111",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#BuiltinAtom" ],
+  "http://www.w3.org/2003/11/swrl#arguments" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/stars"
+    }, {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@value" : "4"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#builtin" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrlb#greaterThan"
+  } ]
+}, {
+  "@id" : "_:genid115",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/h"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel"
+  } ]
+}, {
+  "@id" : "_:genid117",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/h"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/score"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelScore"
+  } ]
+}, {
+  "@id" : "_:genid119",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/h"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/stars"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasStarRating"
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bike"
+    }, {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bus"
+    }, {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Subway"
+    }, {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Taxi"
+    }, {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Tram"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid121",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#BuiltinAtom" ],
+  "http://www.w3.org/2003/11/swrl#arguments" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/stars"
+    }, {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@value" : "4"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#builtin" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"
+  } ]
+}, {
+  "@id" : "_:genid125",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/h"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#isRecomended"
+  } ]
+}, {
+  "@id" : "_:genid18",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Event"
+    }, {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Place"
+    }, {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Transport"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
+  "http://www.w3.org/2002/07/owl#onDatatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://www.w3.org/2002/07/owl#withRestrictions" : [ {
+    "@list" : [ {
+      "@id" : "_:genid4"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#FoodEstablishment"
+    }, {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Settlement"
+    }, {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#TouristAsset"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid26",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointProperties" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#availableIn"
+    }, {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn"
+    }, {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#occursIn"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid30",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointProperties" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasAttractionScore"
+    }, {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasDate"
+    }, {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventID"
+    }, {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventName"
+    }, {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventType"
+    }, {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelPrice"
+    }, {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelScore"
+    }, {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelType"
+    }, {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasLocation"
+    }, {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID"
+    }, {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName"
+    }, {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPriceCategory"
+    }, {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasProvider"
+    }, {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantPrice"
+    }, {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantScore"
+    }, {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasServesCuisine"
+    }, {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasTransportID"
+    }, {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasTransportPrice"
+    }, {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#isRecomended"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "http://www.w3.org/2001/XMLSchema#minExclusive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "0"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasStarRating"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid50",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
+  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "S2"
+  } ],
+  "http://www.w3.org/2003/11/swrl#body" : [ {
+    "@list" : [ {
+      "@id" : "_:genid58"
+    }, {
+      "@id" : "_:genid54"
+    }, {
+      "@id" : "_:genid52"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#head" : [ {
+    "@list" : [ {
+      "@id" : "_:genid60"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid52",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/h"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel"
+  } ]
+}, {
+  "@id" : "_:genid54",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#BuiltinAtom" ],
+  "http://www.w3.org/2003/11/swrl#arguments" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/score"
+    }, {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@value" : "4"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#builtin" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrlb#lessThanOrEqual"
+  } ]
+}, {
+  "@id" : "_:genid58",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/h"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/score"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelScore"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Beach"
+    }, {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#CulturalAttraction"
+    }, {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Monument"
+    }, {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Museum"
+    }, {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Park"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid60",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/h"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#isRecomended"
+  } ]
+}, {
+  "@id" : "_:genid61",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
+  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "S1"
+  } ],
+  "http://www.w3.org/2003/11/swrl#body" : [ {
+    "@list" : [ {
+      "@id" : "_:genid69"
+    }, {
+      "@id" : "_:genid65"
+    }, {
+      "@id" : "_:genid63"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#head" : [ {
+    "@list" : [ {
+      "@id" : "_:genid71"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid63",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/h"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel"
+  } ]
+}, {
+  "@id" : "_:genid65",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#BuiltinAtom" ],
+  "http://www.w3.org/2003/11/swrl#arguments" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/stars"
+    }, {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@value" : "4"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#builtin" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrlb#lessThan"
+  } ]
+}, {
+  "@id" : "_:genid69",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/h"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/stars"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasStarRating"
+  } ]
+}, {
+  "@id" : "_:genid71",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/h"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#isRecomended"
+  } ]
+}, {
+  "@id" : "_:genid72",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
+  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "If restaurant price is more than 15, then its category is High-end"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "PriceCategoryHigh-end"
+  } ],
+  "http://www.w3.org/2003/11/swrl#body" : [ {
+    "@list" : [ {
+      "@id" : "_:genid80"
+    }, {
+      "@id" : "_:genid78"
+    }, {
+      "@id" : "_:genid74"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#head" : [ {
+    "@list" : [ {
+      "@id" : "_:genid82"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid74",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#BuiltinAtom" ],
+  "http://www.w3.org/2003/11/swrl#arguments" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/p"
+    }, {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@value" : "40"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#builtin" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrlb#greaterThan"
+  } ]
+}, {
+  "@id" : "_:genid78",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/r"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurant"
+  } ]
+}, {
+  "@id" : "_:genid80",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/r"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/p"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantPrice"
+  } ]
+}, {
+  "@id" : "_:genid82",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/r"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@value" : "High-end"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPriceCategory"
+  } ]
+}, {
+  "@id" : "_:genid83",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
+  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "If restaurant price is more than 15 and less or equal to 40, then its category is Mid--Range"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "PriceCategoryMid-Range"
+  } ],
+  "http://www.w3.org/2003/11/swrl#body" : [ {
+    "@list" : [ {
+      "@id" : "_:genid95"
+    }, {
+      "@id" : "_:genid91"
+    }, {
+      "@id" : "_:genid87"
+    }, {
+      "@id" : "_:genid85"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#head" : [ {
+    "@list" : [ {
+      "@id" : "_:genid97"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid85",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/r"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurant"
+  } ]
+}, {
+  "@id" : "_:genid87",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#BuiltinAtom" ],
+  "http://www.w3.org/2003/11/swrl#arguments" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/p"
+    }, {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@value" : "40"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#builtin" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrlb#lessThanOrEqual"
+  } ]
+}, {
+  "@id" : "_:genid91",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#BuiltinAtom" ],
+  "http://www.w3.org/2003/11/swrl#arguments" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/p"
+    }, {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@value" : "15"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#builtin" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrlb#greaterThan"
+  } ]
+}, {
+  "@id" : "_:genid95",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/r"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/p"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantPrice"
+  } ]
+}, {
+  "@id" : "_:genid97",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/r"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@value" : "Mid-range"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPriceCategory"
+  } ]
+}, {
+  "@id" : "_:genid98",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
+  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "If restaurant price is less than 15, then its category is Budget"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "PriceCategoryRuleBudget"
+  } ],
+  "http://www.w3.org/2003/11/swrl#body" : [ {
+    "@list" : [ {
+      "@id" : "_:genid106"
+    }, {
+      "@id" : "_:genid102"
+    }, {
+      "@id" : "_:genid100"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#head" : [ {
+    "@list" : [ {
+      "@id" : "_:genid108"
+    } ]
+  } ]
+}, {
+  "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2000/01/rdf-schema#title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2003/11/swrlb#greaterThan",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Builtin" ]
+}, {
+  "@id" : "http://www.w3.org/2003/11/swrlb#greaterThanOrEqual",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Builtin" ]
+}, {
+  "@id" : "http://www.w3.org/2003/11/swrlb#lessThan",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Builtin" ]
+}, {
+  "@id" : "http://www.w3.org/2003/11/swrlb#lessThanOrEqual",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Builtin" ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/h",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/p",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/r",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/score",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/stars",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Esta ontología tiene como objetivo modelar el dominio del turismo inteligente, abarcando la representación formal de eventos turísticos, oferta hotelera, atracciones, y restaurantes disponibles en diferentes ciudades. Su diseño permitirá estructurar, analizar y reutilizar la información de interés turístico para facilitar la recomendación de destinos y servicios personalizados a los usuarios. La ontología incluirá conceptos clave del ámbito turístico, así como relaciones relevantes entre ellos, permitiendo también la inferencia de conocimiento a partir de los datos disponibles"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "Andrea Giron"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Tourism and recomendations"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "v1.0"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Autobus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bus"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#availableIn" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Zaragoza"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasProvider" : [ {
+    "@value" : "City Zaragoza"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasTransportID" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasTransportPrice" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "5.79"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Barcelona",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#City"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasLocation" : [ {
+    "@value" : "41.3874,2.1686"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "4"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName" : [ {
+    "@value" : "Barcelona"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Beach",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A sandy or pebbly area beside a body of water, popular for recreation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Beach"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#TouristAttraction"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bicicleta_Pública",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bike"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#availableIn" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Cadiz"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasProvider" : [ {
+    "@value" : "City Cadiz"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasTransportPrice" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "9.86"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bike",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A human-powered vehicle with two wheels, used for individual urban or recreational transport"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Bike"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://dbpedia.org/page/Bicycle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Transport"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bilbao",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#City"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasLocation" : [ {
+    "@value" : "43.2630,-2.9350"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "6"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName" : [ {
+    "@value" : "Bilbao"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A large motor vehicle that carries passengers by road, typically along a fixed route"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Bus"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Transport"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Cadiz",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#City"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasLocation" : [ {
+    "@value" : "36.5297,-6.2920"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "9"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName" : [ {
+    "@value" : "Cadiz"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Carnaval_Cadiz",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Event"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasDate" : [ {
+    "@value" : "19/04/2024"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventID" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "2"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventName" : [ {
+    "@value" : "Carnaval Cadiz"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventType" : [ {
+    "@value" : "Deportivo"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#occursIn" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Cadiz"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Carnaval_Sevilla",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Event"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasDate" : [ {
+    "@value" : "08/05/2024"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventID" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "4"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventName" : [ {
+    "@value" : "Carnaval Sevilla"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventType" : [ {
+    "@value" : "Música"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#occursIn" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Sevilla"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Castillo_Cadiz",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Beach"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasAttractionScore" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "3.5"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName" : [ {
+    "@value" : "Castillo Cadiz"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Cadiz"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Castillo_Sevilla",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Monument"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasAttractionScore" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "4.6"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName" : [ {
+    "@value" : "Castillo Sevilla"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Sevilla"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Catedral_Cadiz",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Park"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasAttractionScore" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "4.4"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName" : [ {
+    "@value" : "Catedral Cadiz"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Cadiz"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#City",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Urban area with a high population density and significant infrastructure and services"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "City"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Settlement"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Congreso_Bilbao",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Event"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasDate" : [ {
+    "@value" : "01/12/2024"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventID" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "3"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventName" : [ {
+    "@value" : "Congreso Bilbao"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventType" : [ {
+    "@value" : "Cultural"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#occursIn" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bilbao"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Congreso_Cadiz",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Event"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasDate" : [ {
+    "@value" : "02/06/2024"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventID" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventName" : [ {
+    "@value" : "Congreso Cadiz"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventType" : [ {
+    "@value" : "Deportivo"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#occursIn" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Cadiz"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#CulturalAttraction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A tourist site of cultural significance, such as theaters, heritage sites, or historical buildings"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "CulturalAttraction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#TouristAttraction"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Event",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An occurrence such as a concert, festival, or exhibition that attracts tourists or locals"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Event"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Feria_Toledo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Event"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasDate" : [ {
+    "@value" : "26/08/2024"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventID" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "5"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventName" : [ {
+    "@value" : "Feria Toledo"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventType" : [ {
+    "@value" : "Deportivo"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#occursIn" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Toledo"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#FoodEstablishment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A place where food is prepared and served to the public, including restaurants, cafes, bars, or food stands"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "FoodEstablishment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Place"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A commercial establishment providing lodging, meals, and other guest services"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Hotel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://dbpedia.org/page/Hotel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#TouristAsset"
+  }, {
+    "@id" : "_:genid1"
+  }, {
+    "@id" : "_:genid5"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#TouristAttraction"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel_Palace_Zaragoza",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelPrice" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "120"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelScore" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "3.8"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelType" : [ {
+    "@value" : "Lujo"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "5"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName" : [ {
+    "@value" : "Hotel Palace Zaragoza"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasStarRating" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "4"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Zaragoza"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel_Royal_Bilbao",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelPrice" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "232"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelScore" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "3.6"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelType" : [ {
+    "@value" : "Turistico"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "4"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName" : [ {
+    "@value" : "Hotel Royal Bilbao"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasStarRating" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "3"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bilbao"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel_Royal_Malaga",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelPrice" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "175"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelScore" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "4.6"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelType" : [ {
+    "@value" : "Turistico"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "3"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName" : [ {
+    "@value" : "Hotel Royal Malaga"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasStarRating" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "5"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Malaga"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel_Royal_Pamplona",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelPrice" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "56"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelScore" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "3.9"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelType" : [ {
+    "@value" : "Lujo"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "2"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName" : [ {
+    "@value" : "Hotel Royal Pamplona"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasStarRating" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "3"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Sevilla"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel_Vista_Cadiz",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelPrice" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "150"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelScore" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "4"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelType" : [ {
+    "@value" : "Playa"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName" : [ {
+    "@value" : "Hotel Vista Cadiz"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasStarRating" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "4"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Cadiz"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Madrid",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#City"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasLocation" : [ {
+    "@value" : "40.4168,-3.7038"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "3"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName" : [ {
+    "@value" : "Madrid"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Malaga",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#City"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasLocation" : [ {
+    "@value" : "36.7213,-4.4210"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "11"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName" : [ {
+    "@value" : "Malaga"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Metro",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Subway"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#availableIn" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Madrid"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasProvider" : [ {
+    "@value" : "Urban Madrid"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasTransportID" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasTransportPrice" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "8.85"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Monument",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A structure or statue built to commemorate a notable person or event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Monument"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#TouristAttraction"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Museo_Madrid",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Museum"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasAttractionScore" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "3.7"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName" : [ {
+    "@value" : "Museo Madrid"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Madrid"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Museum",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An institution that conserves and displays objects of artistic, cultural, or scientific interest"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Museum"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "https://dbpedia.org/page/Museum"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#TouristAttraction"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Palacio_Pamplona",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#CulturalAttraction"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasAttractionScore" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "4"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName" : [ {
+    "@value" : "Palacio Pamplona"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Pamplona"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Pamplona",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#City"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasLocation" : [ {
+    "@value" : "42.8169,-1.6444"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "7"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName" : [ {
+    "@value" : "Plamplona"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Park",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A public green area in a town, used for recreation and relaxation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Park"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#TouristAttraction"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Place",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A general location or area of interest that can be visited"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Place"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An establishment that prepares and serves food and drinks to customers"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Restaurant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#FoodEstablishment"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurante_Delicia_Malaga",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurant"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "4"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName" : [ {
+    "@value" : "Restaurante Delicia Malaga"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantPrice" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "38"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantScore" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "4.9"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasServesCuisine" : [ {
+    "@value" : "Japonesa"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Malaga"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurante_Delicia_Pamplona",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurant"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "5"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName" : [ {
+    "@value" : "Restaurante Delicia Pamplona"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantPrice" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "36"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantScore" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "4.9"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasServesCuisine" : [ {
+    "@value" : "Mexicana"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Pamplona"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurante_Fusión_Valencia",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurant"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "3"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName" : [ {
+    "@value" : "Restaurante Fusión Valencia"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantPrice" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "13"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantScore" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "4.2"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasServesCuisine" : [ {
+    "@value" : "Andaluza"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Valencia"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurante_Gourmet_Madrid",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurant"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "2"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName" : [ {
+    "@value" : "Restaurante Gourmet Madrid"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantPrice" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "30"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantScore" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "4.8"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasServesCuisine" : [ {
+    "@value" : "Japonesa"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Madrid"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurante_Tradicional_Toledo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurant"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName" : [ {
+    "@value" : "Restaurante Tradicional Toledo"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantPrice" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "46"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantScore" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "3.7"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasServesCuisine" : [ {
+    "@value" : "Mexicana"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Toledo"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#San_Sebastián",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#City"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasLocation" : [ {
+    "@value" : "43.3183,-1.9812"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "8"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName" : [ {
+    "@value" : "San Sebastian"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Settlement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A human settlement, such as a village, town, or small community, usually smaller than a city"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Settlement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Place"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Sevilla",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#City"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasLocation" : [ {
+    "@value" : "37.3886,-5.9823"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "10"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName" : [ {
+    "@value" : "Sevilla"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Subway",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An underground railway system used for urban passenger transport"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Subway"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Transport"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Taxi",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Taxi"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A vehicle licensed to transport passengers in return for payment, usually on demand"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Taxi"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Transport"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#availableIn" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bilbao"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasProvider" : [ {
+    "@value" : "Trans Bilbao"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasTransportID" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasTransportPrice" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "5.75"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Toledo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#City"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasLocation" : [ {
+    "@value" : "39.8628,-4.0273"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName" : [ {
+    "@value" : "Toledo"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#TouristAsset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A general resource or element of interest within the tourism domain, such as attractions, accommodations, or experiences"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "TouristAsset"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Place"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#TouristAttraction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A place of interest that draws visitors due to its cultural, historical, or natural value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "TouristAttraction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#TouristAsset"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Tram",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A rail vehicle that runs on tracks along public urban streets, used for local transport"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Tram"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Transport"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Transport",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Vehicles or systems used for moving from one place to another"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Transport"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Tranvia",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Tram"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#availableIn" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Toledo"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasProvider" : [ {
+    "@value" : "Trans Toledo"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasTransportID" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasTransportPrice" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "3.61"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Valencia",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#City"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasLocation" : [ {
+    "@value" : "39.4699,-0.3763"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "2"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName" : [ {
+    "@value" : "Valencia"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Zaragoza",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#City"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasLocation" : [ {
+    "@value" : "41.6488,-0.8891"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "5"
+  } ],
+  "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName" : [ {
+    "@value" : "Zaragoza"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#availableIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relates a service where the place where you can use it"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Transport"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "availableIn"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#City"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasAttractionScore",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#TouristAttraction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates de Date when something happens"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasDate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Specifies the name or title of an entity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasEventName"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelPrice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates the monetary value or cost associated with an entity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasHotelPrice"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelScore",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasLocation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#City"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Place"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Specifies the name or title of an entity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Place"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasPlaceName"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPriceCategory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasProvider",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Transport"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantPrice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates the monetary value or cost associated with an entity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasRestaurantPrice"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantScore",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasServesCuisine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasStarRating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Indicates the number of stars"
+  }, {
+    "@value" : "hasStarRating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasTransportID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Transport"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasTransportPrice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Transport"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#isRecomended",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relates an entity to the place or geographical area where it is situated"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Place"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "locatedIn"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Place"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#occursIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relates an event or activity to the place where it takes place"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "occursIn"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#City"
+  } ]
+} ]
