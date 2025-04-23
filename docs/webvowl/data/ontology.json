@@ -2,14 +2,11 @@
   "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
   "header" : {
     "languages" : [ "undefined" ],
-    "baseIris" : [ "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0", "http://www.w3.org/2001/XMLSchema" ],
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+    "baseIris" : [ "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology" ],
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
     "version" : "v1.0",
     "labels" : {
       "undefined" : "Tourism and recomendations"
-    },
-    "comments" : {
-      "undefined" : "Esta ontología tiene como objetivo modelar el dominio del turismo inteligente, abarcando la representación formal de eventos turísticos, oferta hotelera, atracciones, y restaurantes disponibles en diferentes ciudades. Su diseño permitirá estructurar, analizar y reutilizar la información de interés turístico para facilitar la recomendación de destinos y servicios personalizados a los usuarios. La ontología incluirá conceptos clave del ámbito turístico, así como relaciones relevantes entre ellos, permitiendo también la inferencia de conocimiento a partir de los datos disponibles"
     },
     "other" : {
       "isDefinedBy" : [ {
@@ -34,46 +31,25 @@
     "id" : "4",
     "type" : "owl:Class"
   }, {
-    "id" : "9",
+    "id" : "6",
     "type" : "rdfs:Datatype"
-  }, {
-    "id" : "10",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "20",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "33",
-    "type" : "owl:Class"
-  }, {
-    "id" : "34",
-    "type" : "owl:Class"
-  }, {
-    "id" : "5",
-    "type" : "owl:Class"
-  }, {
-    "id" : "35",
-    "type" : "owl:Class"
-  }, {
-    "id" : "14",
-    "type" : "owl:Class"
-  }, {
-    "id" : "28",
-    "type" : "owl:Class"
   }, {
     "id" : "7",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "13",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "23",
     "type" : "owl:Class"
   }, {
-    "id" : "49",
+    "id" : "18",
     "type" : "owl:Class"
   }, {
-    "id" : "52",
+    "id" : "12",
     "type" : "owl:Class"
   }, {
-    "id" : "25",
-    "type" : "owl:Class"
-  }, {
-    "id" : "57",
+    "id" : "58",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "59",
@@ -85,73 +61,94 @@
     "id" : "61",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "62",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "63",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "12",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "64",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "19",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "8",
-    "type" : "owl:Class"
-  }, {
-    "id" : "24",
-    "type" : "owl:Class"
-  }, {
     "id" : "3",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "69",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "70",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "71",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "66",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "72",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "22",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "32",
     "type" : "rdfs:Datatype"
   }, {
+    "id" : "62",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "64",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "55",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "66",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:Datatype"
+  }, {
     "id" : "73",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "74",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "15",
     "type" : "owl:Class"
   }, {
-    "id" : "37",
+    "id" : "71",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "75",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "9",
     "type" : "owl:Class"
   }, {
-    "id" : "55",
+    "id" : "28",
     "type" : "owl:Class"
   }, {
-    "id" : "42",
-    "type" : "owl:Class"
-  }, {
-    "id" : "53",
+    "id" : "30",
     "type" : "owl:Class"
   }, {
     "id" : "2",
     "type" : "owl:Class"
   }, {
-    "id" : "54",
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "67",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "68",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -162,265 +159,148 @@
       "IRI-based" : "string"
     }
   }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurant",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Subway",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Restaurant",
-      "undefined" : "Restaurant"
+      "IRI-based" : "Subway",
+      "undefined" : "Subway"
     },
     "individuals" : [ {
-      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurante_Tradicional_Toledo",
-      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Metro",
+      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
       "labels" : {
-        "IRI-based" : "Restaurante_Tradicional_Toledo"
-      }
-    }, {
-      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurante_Gourmet_Madrid",
-      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-      "labels" : {
-        "IRI-based" : "Restaurante_Gourmet_Madrid"
-      }
-    }, {
-      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurante_Delicia_Malaga",
-      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-      "labels" : {
-        "IRI-based" : "Restaurante_Delicia_Malaga"
-      }
-    }, {
-      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurante_Fusión_Valencia",
-      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-      "labels" : {
-        "IRI-based" : "Restaurante_Fusión_Valencia"
-      }
-    }, {
-      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurante_Delicia_Pamplona",
-      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-      "labels" : {
-        "IRI-based" : "Restaurante_Delicia_Pamplona"
+        "IRI-based" : "Metro"
       }
     } ],
     "comment" : {
-      "undefined" : "An establishment that prepares and serves food and drinks to customers"
+      "undefined" : "An underground railway system used for urban passenger transport"
     },
     "id" : "4",
     "superClasses" : [ "5" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#int",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "9",
+    "id" : "6",
     "label" : {
       "IRI-based" : "int"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "10",
+    "id" : "7",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "20",
+    "id" : "13",
     "label" : {
       "IRI-based" : "decimal"
     }
   }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Tram",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Beach",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Tram",
-      "undefined" : "Tram"
+      "IRI-based" : "Beach",
+      "undefined" : "Beach"
     },
     "individuals" : [ {
-      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Tranvia",
-      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Castillo_Cadiz",
+      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
       "labels" : {
-        "IRI-based" : "Tranvia"
+        "IRI-based" : "Castillo_Cadiz",
+        "undefined" : "Playa_Cadiz"
       }
     } ],
     "comment" : {
-      "undefined" : "A rail vehicle that runs on tracks along public urban streets, used for local transport"
+      "undefined" : "A sandy or pebbly area beside a body of water, popular for recreation"
     },
-    "id" : "33",
-    "superClasses" : [ "2" ]
+    "id" : "23",
+    "superClasses" : [ "16" ]
   }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bus",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Bus",
-      "undefined" : "Bus"
-    },
-    "individuals" : [ {
-      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Autobus",
-      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-      "labels" : {
-        "IRI-based" : "Autobus"
-      }
-    } ],
-    "comment" : {
-      "undefined" : "A large motor vehicle that carries passengers by road, typically along a fixed route"
-    },
-    "id" : "34",
-    "superClasses" : [ "2" ]
-  }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#FoodEstablishment",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "FoodEstablishment",
-      "undefined" : "FoodEstablishment"
-    },
-    "subClasses" : [ "4" ],
-    "comment" : {
-      "undefined" : "A place where food is prepared and served to the public, including restaurants, cafes, bars, or food stands"
-    },
-    "id" : "5",
-    "superClasses" : [ "28" ]
-  }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Taxi",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-    "instances" : 1,
-    "label" : {
-      "IRI-based" : "Taxi",
-      "undefined" : "Taxi"
-    },
-    "comment" : {
-      "undefined" : "A vehicle licensed to transport passengers in return for payment, usually on demand"
-    },
-    "id" : "35",
-    "superClasses" : [ "2" ]
-  }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Settlement",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Settlement",
-      "undefined" : "Settlement"
-    },
-    "subClasses" : [ "8" ],
-    "comment" : {
-      "undefined" : "A human settlement, such as a village, town, or small community, usually smaller than a city"
-    },
-    "id" : "14",
-    "superClasses" : [ "28" ]
-  }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Place",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Place",
-      "undefined" : "Place"
-    },
-    "subClasses" : [ "15", "14", "5" ],
-    "comment" : {
-      "undefined" : "A general location or area of interest that can be visited"
-    },
-    "id" : "28"
-  }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Event",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Event",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
     "instances" : 0,
     "label" : {
       "IRI-based" : "Event",
       "undefined" : "Event"
     },
     "individuals" : [ {
-      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Carnaval_Sevilla",
-      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Carnaval_Cadiz",
+      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+      "comment" : {
+        "undefined" : "A popular annual festival, known for its costumes, satirical musical groups (chirigotas), and festive atmosphere"
+      },
       "labels" : {
-        "IRI-based" : "Carnaval_Sevilla"
+        "IRI-based" : "Carnaval_Cadiz",
+        "undefined" : "Carnaval_Cadiz"
       }
     }, {
-      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Congreso_Bilbao",
-      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Congreso_Cadiz",
+      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+      "comment" : {
+        "undefined" : "A formal event that brings together professionals or experts in a field to discuss, present research, or share knowledge"
+      },
       "labels" : {
-        "IRI-based" : "Congreso_Bilbao"
+        "IRI-based" : "Congreso_Cadiz",
+        "undefined" : "Congreso_Cadiz"
       }
     }, {
-      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Feria_Toledo",
-      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Feria_Toledo",
+      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+      "comment" : {
+        "undefined" : "A popular event that may include amusement rides, food stands, music, and performances"
+      },
       "labels" : {
-        "IRI-based" : "Feria_Toledo"
+        "IRI-based" : "Feria_Toledo",
+        "undefined" : "Feria_Toledo"
       }
     }, {
-      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Carnaval_Cadiz",
-      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Congreso_Bilbao",
+      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+      "comment" : {
+        "undefined" : "A formal event that brings together professionals or experts in a field to discuss, present research, or share knowledge"
+      },
       "labels" : {
-        "IRI-based" : "Carnaval_Cadiz"
+        "IRI-based" : "Congreso_Bilbao",
+        "undefined" : "Congreso_Bilbao"
       }
     }, {
-      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Congreso_Cadiz",
-      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Carnaval_Sevilla",
+      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+      "comment" : {
+        "undefined" : "A popular annual festival, known for its costumes and festive atmosphere"
+      },
       "labels" : {
-        "IRI-based" : "Congreso_Cadiz"
+        "IRI-based" : "Carnaval_Sevilla",
+        "undefined" : "Carnaval_Sevilla"
       }
     } ],
     "comment" : {
       "undefined" : "An occurrence such as a concert, festival, or exhibition that attracts tourists or locals"
     },
-    "id" : "7"
+    "id" : "18"
   }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#CulturalAttraction",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#FoodEstablishment",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "CulturalAttraction",
-      "undefined" : "CulturalAttraction"
+      "IRI-based" : "FoodEstablishment",
+      "undefined" : "FoodEstablishment"
     },
-    "individuals" : [ {
-      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Palacio_Pamplona",
-      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-      "labels" : {
-        "IRI-based" : "Palacio_Pamplona"
-      }
-    } ],
+    "subClasses" : [ "2" ],
     "comment" : {
-      "undefined" : "A tourist site of cultural significance, such as theaters, heritage sites, or historical buildings"
+      "undefined" : "A place where food is prepared and served to the public, including restaurants, cafes, bars, or food stands"
     },
-    "id" : "49",
-    "superClasses" : [ "25" ]
-  }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Monument",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Monument",
-      "undefined" : "Monument"
-    },
-    "individuals" : [ {
-      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Castillo_Sevilla",
-      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-      "labels" : {
-        "IRI-based" : "Castillo_Sevilla"
-      }
-    } ],
-    "comment" : {
-      "undefined" : "A structure or statue built to commemorate a notable person or event"
-    },
-    "id" : "52",
-    "superClasses" : [ "25" ]
-  }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#TouristAttraction",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "TouristAttraction",
-      "undefined" : "TouristAttraction"
-    },
-    "subClasses" : [ "49", "52", "53", "54", "55" ],
-    "comment" : {
-      "undefined" : "A place of interest that draws visitors due to its cultural, historical, or natural value"
-    },
-    "id" : "25",
-    "superClasses" : [ "15" ]
+    "id" : "12",
+    "superClasses" : [ "20" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "57",
+    "id" : "58",
     "label" : {
       "IRI-based" : "boolean"
     }
@@ -448,21 +328,21 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "62",
+    "id" : "3",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "63",
+    "id" : "32",
     "label" : {
       "IRI-based" : "decimal"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#int",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "12",
+    "id" : "62",
     "label" : {
       "IRI-based" : "int"
     }
@@ -476,93 +356,186 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "19",
+    "id" : "55",
     "label" : {
       "IRI-based" : "decimal"
     }
   }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#City",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#City",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
     "instances" : 0,
     "label" : {
       "IRI-based" : "City",
       "undefined" : "City"
     },
     "individuals" : [ {
-      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Barcelona",
-      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Pamplona",
+      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
       "labels" : {
-        "IRI-based" : "Barcelona"
+        "IRI-based" : "Pamplona",
+        "undefined" : "Pamplona"
       }
     }, {
-      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Sevilla",
-      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Madrid",
+      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
       "labels" : {
-        "IRI-based" : "Sevilla"
+        "IRI-based" : "Madrid",
+        "undefined" : "Madrid"
       }
     }, {
-      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Cadiz",
-      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Bilbao",
+      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
       "labels" : {
-        "IRI-based" : "Cadiz"
+        "IRI-based" : "Bilbao",
+        "undefined" : "Bilbao"
       }
     }, {
-      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Toledo",
-      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Valencia",
+      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
       "labels" : {
-        "IRI-based" : "Toledo"
+        "IRI-based" : "Valencia",
+        "undefined" : "Valencia"
       }
     }, {
-      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#San_Sebastián",
-      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Barcelona",
+      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
       "labels" : {
-        "IRI-based" : "San_Sebastián"
+        "IRI-based" : "Barcelona",
+        "undefined" : "Barcelona"
       }
     }, {
-      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Pamplona",
-      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Zaragoza",
+      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
       "labels" : {
-        "IRI-based" : "Pamplona"
+        "IRI-based" : "Zaragoza",
+        "undefined" : "Zaragoza"
       }
     }, {
-      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Valencia",
-      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Sevilla",
+      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
       "labels" : {
-        "IRI-based" : "Valencia"
+        "IRI-based" : "Sevilla",
+        "undefined" : "Sevilla"
       }
     }, {
-      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Malaga",
-      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#San_Sebastián",
+      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
       "labels" : {
-        "IRI-based" : "Malaga"
+        "IRI-based" : "San_Sebastián",
+        "undefined" : "San_Sebastian"
       }
     }, {
-      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bilbao",
-      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Toledo",
+      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
       "labels" : {
-        "IRI-based" : "Bilbao"
+        "IRI-based" : "Toledo",
+        "undefined" : "Toledo"
       }
     }, {
-      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Zaragoza",
-      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Cadiz",
+      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
       "labels" : {
-        "IRI-based" : "Zaragoza"
+        "IRI-based" : "Cadiz",
+        "undefined" : "Cadiz"
       }
     }, {
-      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Madrid",
-      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Malaga",
+      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
       "labels" : {
-        "IRI-based" : "Madrid"
+        "IRI-based" : "Malaga",
+        "undefined" : "Malaga"
       }
     } ],
     "comment" : {
       "undefined" : "Urban area with a high population density and significant infrastructure and services"
     },
-    "id" : "8",
-    "superClasses" : [ "14" ]
+    "id" : "52",
+    "superClasses" : [ "9" ]
   }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#CulturalAttraction",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CulturalAttraction",
+      "undefined" : "CulturalAttraction"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Palacio_Pamplona",
+      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+      "labels" : {
+        "IRI-based" : "Palacio_Pamplona"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "A tourist site of cultural significance, such as theaters, heritage sites, or historical buildings"
+    },
+    "id" : "66",
+    "superClasses" : [ "16" ]
+  }, {
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#TouristAttraction",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TouristAttraction",
+      "undefined" : "TouristAttraction"
+    },
+    "subClasses" : [ "23", "45", "67", "68", "66" ],
+    "comment" : {
+      "undefined" : "A place of interest that draws visitors due to its cultural, historical, or natural value"
+    },
+    "id" : "16",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Monument",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Monument",
+      "undefined" : "Monument"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Castillo_Sevilla",
+      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+      "labels" : {
+        "IRI-based" : "Castillo_Sevilla"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "A structure or statue built to commemorate a notable person or event"
+    },
+    "id" : "45",
+    "superClasses" : [ "16" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "69",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#int",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "26",
+    "label" : {
+      "IRI-based" : "int"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "73",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "74",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Hotel",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
     "instances" : 0,
     "annotations" : {
       "seeAlso" : [ {
@@ -577,62 +550,46 @@
       "undefined" : "Hotel"
     },
     "individuals" : [ {
-      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel_Palace_Zaragoza",
-      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Hotel_Royal_Pamplona",
+      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
       "labels" : {
-        "IRI-based" : "Hotel_Palace_Zaragoza"
+        "IRI-based" : "Hotel_Royal_Pamplona",
+        "undefined" : "Hotel_Royal_Pamplona"
       }
     }, {
-      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel_Royal_Malaga",
-      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Hotel_Vista_Cadiz",
+      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
       "labels" : {
-        "IRI-based" : "Hotel_Royal_Malaga"
+        "IRI-based" : "Hotel_Vista_Cadiz",
+        "undefined" : "Hotel_Vista_Cadiz"
       }
     }, {
-      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel_Vista_Cadiz",
-      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Hotel_Royal_Malaga",
+      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
       "labels" : {
-        "IRI-based" : "Hotel_Vista_Cadiz"
+        "IRI-based" : "Hotel_Royal_Malaga",
+        "undefined" : "Hotel_Royal_Malaga"
       }
     }, {
-      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel_Royal_Bilbao",
-      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Hotel_Palace_Zaragoza",
+      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
       "labels" : {
-        "IRI-based" : "Hotel_Royal_Bilbao"
+        "IRI-based" : "Hotel_Palace_Zaragoza",
+        "undefined" : "Hotel_Palace_Zaragoza"
       }
     }, {
-      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel_Royal_Pamplona",
-      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Hotel_Royal_Bilbao",
+      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
       "labels" : {
-        "IRI-based" : "Hotel_Royal_Pamplona"
+        "IRI-based" : "Hotel_Royal_Bilbao",
+        "undefined" : "Hotel_Royal_Bilbao"
       }
     } ],
     "comment" : {
       "undefined" : "A commercial establishment providing lodging, meals, and other guest services"
     },
-    "id" : "24",
-    "superClasses" : [ "15" ]
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "3",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#int",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "69",
-    "label" : {
-      "IRI-based" : "int"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "70",
-    "label" : {
-      "IRI-based" : "string"
-    }
+    "id" : "15",
+    "superClasses" : [ "10" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
@@ -641,97 +598,173 @@
       "IRI-based" : "string"
     }
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "66",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "72",
+    "id" : "47",
     "label" : {
       "IRI-based" : "decimal"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "22",
+    "id" : "50",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "32",
+    "id" : "75",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "73",
+    "id" : "76",
     "label" : {
       "IRI-based" : "decimal"
     }
   }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#TouristAsset",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Settlement",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Settlement",
+      "undefined" : "Settlement"
+    },
+    "subClasses" : [ "52" ],
+    "comment" : {
+      "undefined" : "A human settlement, such as a village, town, or small community, usually smaller than a city"
+    },
+    "id" : "9",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Tram",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Tram",
+      "undefined" : "Tram"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Tranvia",
+      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+      "labels" : {
+        "IRI-based" : "Tranvia",
+        "undefined" : "Tranvia"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "A rail vehicle that runs on tracks along public urban streets, used for local transport"
+    },
+    "id" : "28",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Taxi",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+    "instances" : 1,
+    "label" : {
+      "IRI-based" : "Taxi",
+      "undefined" : "Taxi"
+    },
+    "comment" : {
+      "undefined" : "A vehicle licensed to transport passengers in return for payment, usually on demand"
+    },
+    "id" : "30",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Restaurant",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Restaurant",
+      "undefined" : "Restaurant"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Restaurante_Tradicional_Toledo",
+      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+      "labels" : {
+        "IRI-based" : "Restaurante_Tradicional_Toledo",
+        "undefined" : "Restaurante_Tradicional_Toledo"
+      }
+    }, {
+      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Restaurante_Gourmet_Madrid",
+      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+      "labels" : {
+        "IRI-based" : "Restaurante_Gourmet_Madrid",
+        "undefined" : "Restaurante_Gourmet_Madrid"
+      }
+    }, {
+      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Restaurante_Delicia_Malaga",
+      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+      "labels" : {
+        "IRI-based" : "Restaurante_Delicia_Malaga",
+        "undefined" : "Restaurante_Delicia_Malaga"
+      }
+    }, {
+      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Restaurante_Delicia_Pamplona",
+      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+      "labels" : {
+        "IRI-based" : "Restaurante_Delicia_Pamplona",
+        "undefined" : "Restaurante_Delicia_Pamplona"
+      }
+    }, {
+      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Restaurante_Fusión_Valencia",
+      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+      "labels" : {
+        "IRI-based" : "Restaurante_Fusión_Valencia",
+        "undefined" : "Restaurante_Fusion_Valencia"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "An establishment that prepares and serves food and drinks to customers"
+    },
+    "id" : "2",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#TouristAsset",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
     "instances" : 0,
     "label" : {
       "IRI-based" : "TouristAsset",
       "undefined" : "TouristAsset"
     },
-    "subClasses" : [ "24", "25" ],
+    "subClasses" : [ "15", "16" ],
     "comment" : {
       "undefined" : "A general resource or element of interest within the tourism domain, such as attractions, accommodations, or experiences"
     },
-    "id" : "15",
-    "superClasses" : [ "28" ]
+    "id" : "10",
+    "superClasses" : [ "20" ]
   }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Subway",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Place",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Subway",
-      "undefined" : "Subway"
+      "IRI-based" : "Place",
+      "undefined" : "Place"
     },
-    "individuals" : [ {
-      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Metro",
-      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-      "labels" : {
-        "IRI-based" : "Metro"
-      }
-    } ],
+    "subClasses" : [ "9", "12", "10" ],
     "comment" : {
-      "undefined" : "An underground railway system used for urban passenger transport"
+      "undefined" : "A general location or area of interest that can be visited"
     },
-    "id" : "37",
-    "superClasses" : [ "2" ]
+    "id" : "20"
   }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Beach",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Transport",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Beach",
-      "undefined" : "Beach"
+      "IRI-based" : "Transport",
+      "undefined" : "Transport"
     },
-    "individuals" : [ {
-      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Castillo_Cadiz",
-      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-      "labels" : {
-        "IRI-based" : "Castillo_Cadiz"
-      }
-    } ],
+    "subClasses" : [ "37", "28", "4", "30", "35" ],
     "comment" : {
-      "undefined" : "A sandy or pebbly area beside a body of water, popular for recreation"
+      "undefined" : "Vehicles or systems used for moving from one place to another"
     },
-    "id" : "55",
-    "superClasses" : [ "25" ]
+    "id" : "5"
   }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bike",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Bike",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
     "instances" : 0,
     "annotations" : {
       "seeAlso" : [ {
@@ -746,28 +779,32 @@
       "undefined" : "Bike"
     },
     "individuals" : [ {
-      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bicicleta_Pública",
-      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Bicicleta_Pública",
+      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+      "comment" : {
+        "undefined" : "Bike you can rent"
+      },
       "labels" : {
-        "IRI-based" : "Bicicleta_Pública"
+        "IRI-based" : "Bicicleta_Pública",
+        "undefined" : "Bicicleta_Publica"
       }
     } ],
     "comment" : {
       "undefined" : "A human-powered vehicle with two wheels, used for individual urban or recreational transport"
     },
-    "id" : "42",
-    "superClasses" : [ "2" ]
+    "id" : "37",
+    "superClasses" : [ "5" ]
   }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Park",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Park",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
     "instances" : 0,
     "label" : {
       "IRI-based" : "Park",
       "undefined" : "Park"
     },
     "individuals" : [ {
-      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Catedral_Cadiz",
-      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Catedral_Cadiz",
+      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
       "labels" : {
         "IRI-based" : "Catedral_Cadiz"
       }
@@ -775,24 +812,35 @@
     "comment" : {
       "undefined" : "A public green area in a town, used for recreation and relaxation"
     },
-    "id" : "53",
-    "superClasses" : [ "25" ]
+    "id" : "67",
+    "superClasses" : [ "16" ]
   }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Transport",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Bus",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Transport",
-      "undefined" : "Transport"
+      "IRI-based" : "Bus",
+      "undefined" : "Bus"
     },
-    "subClasses" : [ "33", "42", "34", "37", "35" ],
+    "individuals" : [ {
+      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Autobus",
+      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+      "comment" : {
+        "undefined" : "A public land transport vehicle used to move people within a city or between different locations"
+      },
+      "labels" : {
+        "IRI-based" : "Autobus",
+        "undefined" : "Autobus"
+      }
+    } ],
     "comment" : {
-      "undefined" : "Vehicles or systems used for moving from one place to another"
+      "undefined" : "A large motor vehicle that carries passengers by road, typically along a fixed route"
     },
-    "id" : "2"
+    "id" : "35",
+    "superClasses" : [ "5" ]
   }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Museum",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Museum",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
     "instances" : 0,
     "annotations" : {
       "seeAlso" : [ {
@@ -807,48 +855,52 @@
       "undefined" : "Museum"
     },
     "individuals" : [ {
-      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Museo_Madrid",
-      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+      "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Museo_Madrid",
+      "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+      "comment" : {
+        "undefined" : "An institution that conserves and displays objects of artistic, cultural, or scientific interest"
+      },
       "labels" : {
-        "IRI-based" : "Museo_Madrid"
+        "IRI-based" : "Museo_Madrid",
+        "undefined" : "Museo_Madrid"
       }
     } ],
     "comment" : {
       "undefined" : "An institution that conserves and displays objects of artistic, cultural, or scientific interest"
     },
-    "id" : "54",
-    "superClasses" : [ "25" ]
+    "id" : "68",
+    "superClasses" : [ "16" ]
   } ],
   "property" : [ {
     "id" : "1",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "6",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "11",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "13",
+    "id" : "8",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "16",
-    "type" : "owl:datatypeProperty"
+    "id" : "11",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "14",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "17",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "18",
-    "type" : "owl:datatypeProperty"
+    "id" : "19",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "21",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "22",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "24",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "23",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "26",
-    "type" : "owl:disjointWith"
+    "id" : "25",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "27",
     "type" : "owl:disjointWith"
@@ -856,11 +908,14 @@
     "id" : "29",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "30",
-    "type" : "owl:disjointWith"
-  }, {
     "id" : "31",
     "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "33",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "34",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "36",
     "type" : "owl:disjointWith"
@@ -877,62 +932,59 @@
     "id" : "41",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "43",
+    "id" : "42",
     "type" : "owl:disjointWith"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "44",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "45",
-    "type" : "owl:disjointWith"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "46",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "47",
-    "type" : "owl:disjointWith"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "48",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "50",
-    "type" : "rdfs:SubClassOf"
+    "id" : "49",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "51",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "53",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "54",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "56",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "58",
+    "id" : "57",
     "type" : "rdf:Property"
   }, {
+    "id" : "63",
+    "type" : "owl:datatypeProperty"
+  }, {
     "id" : "65",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "67",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "68",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "74",
+    "id" : "70",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "75",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "76",
+    "id" : "72",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "77",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "78",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "79",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "80",
     "type" : "rdfs:SubClassOf"
@@ -959,13 +1011,13 @@
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "88",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "89",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "90",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "91",
     "type" : "rdfs:SubClassOf"
@@ -980,19 +1032,19 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "95",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "96",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "97",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "98",
     "type" : "owl:disjointWith"
   }, {
     "id" : "99",
-    "type" : "owl:disjointWith"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "100",
     "type" : "owl:disjointWith"
@@ -1004,22 +1056,22 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "103",
-    "type" : "owl:disjointWith"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "104",
-    "type" : "owl:disjointWith"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "105",
     "type" : "owl:disjointWith"
   }, {
     "id" : "106",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "107",
     "type" : "owl:disjointWith"
   }, {
     "id" : "108",
-    "type" : "owl:disjointWith"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "109",
     "type" : "owl:datatypeProperty"
@@ -1028,215 +1080,295 @@
     "type" : "owl:datatypeProperty"
   } ],
   "propertyAttribute" : [ {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasProvider",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasServesCuisine",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
     "range" : "3",
     "label" : {
-      "IRI-based" : "hasProvider"
+      "IRI-based" : "hasServesCuisine",
+      "undefined" : "hasServedCuisine"
     },
     "domain" : "2",
+    "comment" : {
+      "undefined" : "Indicates the type of food served"
+    },
     "attributes" : [ "datatype" ],
     "id" : "1"
   }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#occursIn",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-    "range" : "8",
-    "label" : {
-      "IRI-based" : "occursIn",
-      "undefined" : "occursIn"
-    },
-    "domain" : "7",
-    "comment" : {
-      "undefined" : "Relates an event or activity to the place where it takes place"
-    },
-    "attributes" : [ "object" ],
-    "id" : "6"
+    "range" : "10",
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "8"
   }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasTransportID",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-    "range" : "12",
-    "label" : {
-      "IRI-based" : "hasTransportID"
-    },
-    "domain" : "2",
-    "attributes" : [ "datatype" ],
+    "range" : "10",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "11"
   }, {
-    "range" : "15",
-    "domain" : "14",
+    "range" : "16",
+    "domain" : "15",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "13"
+    "id" : "14"
   }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventID",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-    "range" : "9",
-    "label" : {
-      "IRI-based" : "hasEventID"
-    },
-    "domain" : "7",
-    "attributes" : [ "datatype" ],
-    "id" : "16"
-  }, {
-    "range" : "15",
-    "domain" : "5",
+    "range" : "5",
+    "domain" : "18",
     "attributes" : [ "anonymous", "object" ],
     "id" : "17"
   }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantPrice",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-    "range" : "19",
+    "range" : "20",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "19"
+  }, {
+    "range" : "9",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "21"
+  }, {
+    "range" : "5",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "22"
+  }, {
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasEventName",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+    "range" : "0",
     "label" : {
-      "IRI-based" : "hasRestaurantPrice",
-      "undefined" : "hasRestaurantPrice"
+      "IRI-based" : "hasEventName",
+      "undefined" : "hasEventName"
     },
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "Specifies the name or title of an entity"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "24"
+  }, {
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasPlaceID",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "hasPlaceID",
+      "undefined" : "hasPlaceID"
+    },
+    "domain" : "20",
+    "comment" : {
+      "undefined" : "Unique identifier"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "25"
+  }, {
+    "range" : "28",
     "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "27"
+  }, {
+    "range" : "30",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "29"
+  }, {
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasTransportPrice",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "hasTransportPrice",
+      "undefined" : "hasTransportPrice"
+    },
+    "domain" : "5",
     "comment" : {
       "undefined" : "Indicates the monetary value or cost associated with an entity"
     },
     "attributes" : [ "datatype" ],
-    "id" : "18"
-  }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventType",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-    "range" : "22",
-    "label" : {
-      "IRI-based" : "hasEventType"
-    },
-    "domain" : "7",
-    "attributes" : [ "datatype" ],
-    "id" : "21"
-  }, {
-    "range" : "25",
-    "domain" : "24",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "23"
-  }, {
-    "range" : "2",
-    "domain" : "7",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "26"
-  }, {
-    "range" : "28",
-    "domain" : "7",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "27"
-  }, {
-    "range" : "14",
-    "domain" : "5",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "29"
-  }, {
-    "range" : "2",
-    "domain" : "28",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "30"
-  }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelType",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-    "range" : "32",
-    "label" : {
-      "IRI-based" : "hasHotelType"
-    },
-    "domain" : "24",
-    "attributes" : [ "datatype" ],
     "id" : "31"
   }, {
-    "range" : "33",
+    "range" : "28",
+    "domain" : "30",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "33"
+  }, {
+    "range" : "4",
+    "domain" : "35",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "34"
+  }, {
+    "range" : "28",
     "domain" : "37",
     "attributes" : [ "anonymous", "object" ],
     "id" : "36"
   }, {
-    "range" : "35",
-    "domain" : "37",
+    "range" : "28",
+    "domain" : "35",
     "attributes" : [ "anonymous", "object" ],
     "id" : "38"
   }, {
-    "range" : "33",
+    "range" : "30",
     "domain" : "35",
     "attributes" : [ "anonymous", "object" ],
     "id" : "39"
   }, {
-    "range" : "37",
-    "domain" : "34",
+    "range" : "35",
+    "domain" : "37",
     "attributes" : [ "anonymous", "object" ],
     "id" : "40"
   }, {
-    "range" : "33",
-    "domain" : "42",
+    "range" : "30",
+    "domain" : "37",
     "attributes" : [ "anonymous", "object" ],
     "id" : "41"
   }, {
-    "range" : "33",
-    "domain" : "34",
+    "range" : "4",
+    "domain" : "37",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "42"
+  }, {
+    "range" : "12",
+    "domain" : "2",
     "attributes" : [ "anonymous", "object" ],
     "id" : "43"
   }, {
-    "range" : "35",
-    "domain" : "34",
+    "range" : "16",
+    "domain" : "45",
     "attributes" : [ "anonymous", "object" ],
     "id" : "44"
   }, {
-    "range" : "34",
-    "domain" : "42",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "45"
-  }, {
-    "range" : "35",
-    "domain" : "42",
-    "attributes" : [ "anonymous", "object" ],
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasHotelPrice",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "hasHotelPrice",
+      "undefined" : "hasHotelPrice"
+    },
+    "domain" : "15",
+    "comment" : {
+      "undefined" : "Indicates the monetary value or cost associated with an entity"
+    },
+    "attributes" : [ "datatype" ],
     "id" : "46"
   }, {
-    "range" : "37",
-    "domain" : "42",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "47"
-  }, {
-    "range" : "5",
-    "domain" : "4",
+    "range" : "16",
+    "domain" : "23",
     "attributes" : [ "anonymous", "object" ],
     "id" : "48"
   }, {
-    "range" : "28",
-    "domain" : "15",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "50"
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasEventType",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "hasEventType",
+      "undefined" : "hasEventType"
+    },
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "Indicates which kind of event it is"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "49"
   }, {
-    "range" : "14",
-    "domain" : "8",
-    "attributes" : [ "anonymous", "object" ],
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#occursIn",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+    "range" : "52",
+    "label" : {
+      "IRI-based" : "occursIn",
+      "undefined" : "occursIn"
+    },
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "Relates an event or activity to the place where it takes place"
+    },
+    "attributes" : [ "object" ],
     "id" : "51"
   }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#isRecomended",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-    "range" : "57",
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#availableIn",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+    "range" : "52",
     "label" : {
-      "IRI-based" : "isRecomended"
+      "IRI-based" : "availableIn",
+      "undefined" : "availableIn"
     },
-    "domain" : "24",
+    "domain" : "5",
+    "comment" : {
+      "undefined" : "Relates a service where the place where you can use it"
+    },
+    "attributes" : [ "object" ],
+    "id" : "53"
+  }, {
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasRestaurantPrice",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+    "range" : "55",
+    "label" : {
+      "IRI-based" : "hasRestaurantPrice",
+      "undefined" : "hasRestaurantPrice"
+    },
+    "domain" : "2",
+    "comment" : {
+      "undefined" : "Indicates the monetary value or cost associated with an entity"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "54"
+  }, {
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasDate",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "hasDate",
+      "undefined" : "hasDate"
+    },
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "Indicates de Date when something happens"
+    },
     "attributes" : [ "datatype" ],
     "id" : "56"
   }, {
-    "domain" : "35",
-    "range" : "35",
-    "id" : "58",
+    "domain" : "30",
+    "range" : "30",
+    "id" : "57",
     "label" : {
       "IRI-based" : "47",
       "undefined" : "is a"
     }
   }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-    "range" : "66",
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasTransportID",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+    "range" : "62",
+    "label" : {
+      "IRI-based" : "hasTransportID",
+      "undefined" : "hasTransportID"
+    },
+    "domain" : "5",
+    "comment" : {
+      "undefined" : "Unique identifier"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "63"
+  }, {
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#locatedIn",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "locatedIn",
+      "undefined" : "locatedIn"
+    },
+    "domain" : "20",
+    "comment" : {
+      "undefined" : "Relates an entity to the place or geographical area where it is situated"
+    },
+    "attributes" : [ "object" ],
+    "id" : "65"
+  }, {
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasPlaceName",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+    "range" : "71",
     "label" : {
       "IRI-based" : "hasPlaceName",
       "undefined" : "hasPlaceName"
     },
-    "domain" : "28",
+    "domain" : "20",
     "comment" : {
       "undefined" : "Specifies the name or title of an entity"
     },
     "attributes" : [ "datatype" ],
-    "id" : "65"
+    "id" : "70"
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#topDataProperty",
     "baseIri" : "http://www.w3.org/2002/07/owl",
@@ -1246,287 +1378,266 @@
     },
     "domain" : "60",
     "attributes" : [ "external", "datatype" ],
-    "id" : "67"
+    "id" : "72"
   }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-    "range" : "28",
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasHotelType",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+    "range" : "75",
     "label" : {
-      "IRI-based" : "locatedIn",
-      "undefined" : "locatedIn"
+      "IRI-based" : "hasHotelType",
+      "undefined" : "hasHotelType"
     },
-    "domain" : "28",
+    "domain" : "15",
     "comment" : {
-      "undefined" : "Relates an entity to the place or geographical area where it is situated"
-    },
-    "attributes" : [ "object" ],
-    "id" : "68"
-  }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasLocation",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-    "range" : "70",
-    "label" : {
-      "IRI-based" : "hasLocation"
-    },
-    "domain" : "8",
-    "attributes" : [ "datatype" ],
-    "id" : "74"
-  }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPriceCategory",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-    "range" : "71",
-    "label" : {
-      "IRI-based" : "hasPriceCategory"
-    },
-    "domain" : "4",
-    "attributes" : [ "datatype" ],
-    "id" : "75"
-  }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelPrice",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-    "range" : "72",
-    "label" : {
-      "IRI-based" : "hasHotelPrice",
-      "undefined" : "hasHotelPrice"
-    },
-    "domain" : "24",
-    "comment" : {
-      "undefined" : "Indicates the monetary value or cost associated with an entity"
+      "undefined" : "Indicates which kind of hotel it is"
     },
     "attributes" : [ "datatype" ],
-    "id" : "76"
-  }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#availableIn",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-    "range" : "8",
-    "label" : {
-      "IRI-based" : "availableIn",
-      "undefined" : "availableIn"
-    },
-    "domain" : "2",
-    "comment" : {
-      "undefined" : "Relates a service where the place where you can use it"
-    },
-    "attributes" : [ "object" ],
     "id" : "77"
   }, {
-    "range" : "2",
-    "domain" : "37",
-    "attributes" : [ "anonymous", "object" ],
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#isRecomended",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+    "range" : "58",
+    "label" : {
+      "IRI-based" : "isRecomended",
+      "undefined" : "isRecommended"
+    },
+    "domain" : "15",
+    "comment" : {
+      "undefined" : "Indicates if an entity is recomended or not based on its score and stars"
+    },
+    "attributes" : [ "datatype" ],
     "id" : "78"
   }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-    "range" : "69",
-    "label" : {
-      "IRI-based" : "hasPlaceID"
-    },
-    "domain" : "28",
-    "attributes" : [ "datatype" ],
+    "range" : "5",
+    "domain" : "30",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "79"
   }, {
-    "range" : "2",
-    "domain" : "34",
+    "range" : "5",
+    "domain" : "4",
     "attributes" : [ "anonymous", "object" ],
     "id" : "80"
   }, {
-    "range" : "2",
+    "range" : "5",
     "domain" : "35",
     "attributes" : [ "anonymous", "object" ],
     "id" : "81"
   }, {
-    "range" : "15",
-    "domain" : "25",
+    "range" : "20",
+    "domain" : "10",
     "attributes" : [ "anonymous", "object" ],
     "id" : "82"
   }, {
-    "range" : "15",
-    "domain" : "24",
+    "range" : "20",
+    "domain" : "12",
     "attributes" : [ "anonymous", "object" ],
     "id" : "83"
   }, {
-    "range" : "2",
-    "domain" : "42",
+    "range" : "5",
+    "domain" : "28",
     "attributes" : [ "anonymous", "object" ],
     "id" : "84"
   }, {
-    "range" : "2",
-    "domain" : "33",
+    "range" : "5",
+    "domain" : "37",
     "attributes" : [ "anonymous", "object" ],
     "id" : "85"
   }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasDate",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-    "range" : "10",
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasHotelScore",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+    "range" : "76",
     "label" : {
-      "IRI-based" : "hasDate",
-      "undefined" : "hasDate"
+      "IRI-based" : "hasHotelScore",
+      "undefined" : "hasHotelScore"
     },
-    "domain" : "7",
+    "domain" : "15",
     "comment" : {
-      "undefined" : "Indicates de Date when something happens"
+      "undefined" : "Indicates de score of an entity"
     },
     "attributes" : [ "datatype" ],
     "id" : "86"
   }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasTransportPrice",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-    "range" : "63",
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasAttractionScore",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+    "range" : "13",
     "label" : {
-      "IRI-based" : "hasTransportPrice"
+      "IRI-based" : "hasAttractionScore",
+      "undefined" : "hasAttractionScore"
     },
-    "domain" : "2",
+    "domain" : "16",
+    "comment" : {
+      "undefined" : "Indicates de score of an entity"
+    },
     "attributes" : [ "datatype" ],
     "id" : "87"
   }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventName",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-    "range" : "0",
-    "label" : {
-      "IRI-based" : "hasEventName",
-      "undefined" : "hasEventName"
-    },
-    "domain" : "7",
-    "comment" : {
-      "undefined" : "Specifies the name or title of an entity"
-    },
-    "attributes" : [ "datatype" ],
+    "range" : "10",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "88"
   }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasAttractionScore",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-    "range" : "20",
-    "label" : {
-      "IRI-based" : "hasAttractionScore"
-    },
-    "domain" : "25",
-    "attributes" : [ "datatype" ],
+    "range" : "10",
+    "domain" : "15",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "89"
   }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelScore",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-    "range" : "73",
-    "label" : {
-      "IRI-based" : "hasHotelScore"
-    },
-    "domain" : "24",
-    "attributes" : [ "datatype" ],
+    "range" : "20",
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "90"
   }, {
-    "range" : "25",
-    "domain" : "54",
+    "range" : "16",
+    "domain" : "68",
     "attributes" : [ "anonymous", "object" ],
     "id" : "91"
   }, {
-    "range" : "25",
-    "domain" : "53",
+    "range" : "16",
+    "domain" : "67",
     "attributes" : [ "anonymous", "object" ],
     "id" : "92"
   }, {
-    "range" : "25",
-    "domain" : "55",
+    "range" : "9",
+    "domain" : "52",
     "attributes" : [ "anonymous", "object" ],
     "id" : "93"
   }, {
-    "range" : "28",
-    "domain" : "5",
+    "range" : "16",
+    "domain" : "66",
     "attributes" : [ "anonymous", "object" ],
     "id" : "94"
   }, {
-    "range" : "28",
-    "domain" : "14",
+    "range" : "68",
+    "domain" : "23",
     "attributes" : [ "anonymous", "object" ],
     "id" : "95"
   }, {
-    "range" : "25",
-    "domain" : "52",
+    "range" : "67",
+    "domain" : "23",
     "attributes" : [ "anonymous", "object" ],
     "id" : "96"
   }, {
-    "range" : "25",
-    "domain" : "49",
+    "range" : "45",
+    "domain" : "66",
     "attributes" : [ "anonymous", "object" ],
     "id" : "97"
   }, {
-    "range" : "54",
-    "domain" : "55",
+    "range" : "68",
+    "domain" : "66",
     "attributes" : [ "anonymous", "object" ],
     "id" : "98"
   }, {
-    "range" : "53",
-    "domain" : "55",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "99"
-  }, {
-    "range" : "52",
-    "domain" : "49",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "100"
-  }, {
-    "range" : "54",
-    "domain" : "49",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "101"
-  }, {
-    "range" : "53",
-    "domain" : "49",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "102"
-  }, {
-    "range" : "54",
-    "domain" : "52",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "103"
-  }, {
-    "range" : "53",
-    "domain" : "52",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "104"
-  }, {
-    "range" : "53",
-    "domain" : "54",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "105"
-  }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantScore",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-    "range" : "64",
-    "label" : {
-      "IRI-based" : "hasRestaurantScore"
-    },
-    "domain" : "4",
-    "attributes" : [ "datatype" ],
-    "id" : "106"
-  }, {
-    "range" : "49",
-    "domain" : "55",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "107"
-  }, {
-    "range" : "52",
-    "domain" : "55",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "108"
-  }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasStarRating",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasStarRating",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
     "range" : "61",
     "label" : {
       "IRI-based" : "hasStarRating",
       "undefined" : "hasStarRating"
     },
     "cardinality" : "1",
-    "domain" : "24",
+    "domain" : "15",
+    "comment" : {
+      "undefined" : "Indicates the number of stars"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "99"
+  }, {
+    "range" : "67",
+    "domain" : "66",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "100"
+  }, {
+    "range" : "68",
+    "domain" : "45",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "101"
+  }, {
+    "range" : "67",
+    "domain" : "45",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "102"
+  }, {
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasPriceCategory",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+    "range" : "74",
+    "label" : {
+      "IRI-based" : "hasPriceCategory",
+      "undefined" : "hasPriceCategory"
+    },
+    "domain" : "2",
+    "comment" : {
+      "undefined" : "Indicates the category based on the price"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "103"
+  }, {
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasLocation",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+    "range" : "73",
+    "label" : {
+      "IRI-based" : "hasLocation",
+      "undefined" : "hasLocation"
+    },
+    "domain" : "52",
+    "comment" : {
+      "undefined" : "Indicates the place where the entity is"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "104"
+  }, {
+    "range" : "67",
+    "domain" : "68",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "105"
+  }, {
+    "range" : "66",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "106"
+  }, {
+    "range" : "45",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "107"
+  }, {
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasProvider",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+    "range" : "69",
+    "label" : {
+      "IRI-based" : "hasProvider",
+      "undefined" : "hasProvider"
+    },
+    "domain" : "5",
+    "comment" : {
+      "undefined" : "Indicates the enterprise that provides the service"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "108"
+  }, {
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasRestaurantScore",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+    "range" : "64",
+    "label" : {
+      "IRI-based" : "hasRestaurantScore",
+      "undefined" : "hasRestaurantScore"
+    },
+    "domain" : "2",
+    "comment" : {
+      "undefined" : "Indicates de score of an entity"
+    },
     "attributes" : [ "datatype" ],
     "id" : "109"
   }, {
-    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasServesCuisine",
-    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0",
-    "range" : "62",
+    "iri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasEventID",
+    "baseIri" : "http://www.w3.org/andrea/ontologies/2025/3/tourismOntology",
+    "range" : "6",
     "label" : {
-      "IRI-based" : "hasServesCuisine"
+      "IRI-based" : "hasEventID",
+      "undefined" : "hasEventID"
     },
-    "domain" : "4",
+    "domain" : "18",
+    "comment" : {
+      "undefined" : "Unique identifier"
+    },
     "attributes" : [ "datatype" ],
     "id" : "110"
   } ]

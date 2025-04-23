@@ -1,17 +1,16 @@
-@prefix : <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#> .
+@prefix : <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#> .
+@base <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#> .
 
-<http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0> rdf:type owl:Ontology ;
-                                                                   owl:versionIRI <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0> ;
-                                                                   rdfs:comment "Esta ontología tiene como objetivo modelar el dominio del turismo inteligente, abarcando la representación formal de eventos turísticos, oferta hotelera, atracciones, y restaurantes disponibles en diferentes ciudades. Su diseño permitirá estructurar, analizar y reutilizar la información de interés turístico para facilitar la recomendación de destinos y servicios personalizados a los usuarios. La ontología incluirá conceptos clave del ámbito turístico, así como relaciones relevantes entre ellos, permitiendo también la inferencia de conocimiento a partir de los datos disponibles" ;
-                                                                   rdfs:isDefinedBy "Andrea Giron" ;
-                                                                   rdfs:label "Tourism and recomendations" ;
-                                                                   owl:versionInfo "v1.0" .
+<http://www.w3.org/andrea/ontologies/2025/3/tourismOntology> rdf:type owl:Ontology ;
+                                                              owl:versionIRI <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology> ;
+                                                              rdfs:isDefinedBy "Andrea Giron" ;
+                                                              rdfs:label "Tourism and recomendations" ;
+                                                              owl:versionInfo "v1.0" .
 
 #################################################################
 #    Annotation properties
@@ -29,7 +28,7 @@ rdfs:title rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#availableIn
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#availableIn
 :availableIn rdf:type owl:ObjectProperty ;
              rdfs:domain :Transport ;
              rdfs:range :City ;
@@ -37,7 +36,7 @@ rdfs:title rdf:type owl:AnnotationProperty .
              rdfs:label "availableIn" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#locatedIn
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#locatedIn
 :locatedIn rdf:type owl:ObjectProperty ;
            rdfs:domain :Place ;
            rdfs:range :Place ;
@@ -45,7 +44,7 @@ rdfs:title rdf:type owl:AnnotationProperty .
            rdfs:label "locatedIn" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#occursIn
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#occursIn
 :occursIn rdf:type owl:ObjectProperty ;
           rdfs:domain :Event ;
           rdfs:range :City ;
@@ -57,103 +56,112 @@ rdfs:title rdf:type owl:AnnotationProperty .
 #    Data properties
 #################################################################
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasAttractionScore
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasAttractionScore
 :hasAttractionScore rdf:type owl:DatatypeProperty ;
-                    rdfs:subPropertyOf owl:topDataProperty ;
                     rdfs:domain :TouristAttraction ;
-                    rdfs:range xsd:decimal .
+                    rdfs:range xsd:decimal ;
+                    rdfs:comment "Indicates de score of an entity" ;
+                    rdfs:label "hasAttractionScore" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasDate
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasDate
 :hasDate rdf:type owl:DatatypeProperty ;
-         rdfs:subPropertyOf owl:topDataProperty ;
          rdfs:domain :Event ;
          rdfs:range xsd:string ;
          rdfs:comment "Indicates de Date when something happens" ;
          rdfs:label "hasDate" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventID
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasEventID
 :hasEventID rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf owl:topDataProperty ;
             rdfs:domain :Event ;
-            rdfs:range xsd:int .
+            rdfs:range xsd:int ;
+            rdfs:comment "Unique identifier" ;
+            rdfs:label "hasEventID" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventName
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasEventName
 :hasEventName rdf:type owl:DatatypeProperty ;
-              rdfs:subPropertyOf owl:topDataProperty ;
               rdfs:domain :Event ;
               rdfs:range xsd:string ;
               rdfs:comment "Specifies the name or title of an entity" ;
               rdfs:label "hasEventName" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasEventType
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasEventType
 :hasEventType rdf:type owl:DatatypeProperty ;
-              rdfs:subPropertyOf owl:topDataProperty ;
               rdfs:domain :Event ;
-              rdfs:range xsd:string .
+              rdfs:range xsd:string ;
+              rdfs:comment "Indicates which kind of event it is" ;
+              rdfs:label "hasEventType" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelPrice
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasHotelPrice
 :hasHotelPrice rdf:type owl:DatatypeProperty ;
-               rdfs:subPropertyOf owl:topDataProperty ;
                rdfs:domain :Hotel ;
                rdfs:range xsd:decimal ;
                rdfs:comment "Indicates the monetary value or cost associated with an entity" ;
                rdfs:label "hasHotelPrice" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelScore
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasHotelScore
 :hasHotelScore rdf:type owl:DatatypeProperty ;
                rdfs:domain :Hotel ;
-               rdfs:range xsd:decimal .
+               rdfs:range xsd:decimal ;
+               rdfs:comment "Indicates de score of an entity" ;
+               rdfs:label "hasHotelScore" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasHotelType
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasHotelType
 :hasHotelType rdf:type owl:DatatypeProperty ;
-              rdfs:subPropertyOf owl:topDataProperty ;
               rdfs:domain :Hotel ;
-              rdfs:range xsd:string .
+              rdfs:range xsd:string ;
+              rdfs:comment "Indicates which kind of hotel it is" ;
+              rdfs:label "hasHotelType" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasLocation
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasLocation
 :hasLocation rdf:type owl:DatatypeProperty ;
-             rdfs:subPropertyOf owl:topDataProperty ;
              rdfs:domain :City ;
-             rdfs:range xsd:string .
+             rdfs:range xsd:string ;
+             rdfs:comment "Indicates the place where the entity is" ;
+             rdfs:label "hasLocation" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceID
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasPlaceID
 :hasPlaceID rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf owl:topDataProperty ;
             rdfs:domain :Place ;
-            rdfs:range xsd:int .
+            rdfs:range xsd:int ;
+            rdfs:comment "Unique identifier" ;
+            rdfs:label "hasPlaceID" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPlaceName
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasPlaceName
 :hasPlaceName rdf:type owl:DatatypeProperty ;
-              rdfs:subPropertyOf owl:topDataProperty ;
               rdfs:domain :Place ;
               rdfs:range xsd:string ;
               rdfs:comment "Specifies the name or title of an entity" ;
               rdfs:label "hasPlaceName" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasPriceCategory
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasPriceCategory
 :hasPriceCategory rdf:type owl:DatatypeProperty ;
                   rdfs:domain :Restaurant ;
-                  rdfs:range xsd:string .
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Indicates the category based on the price" ;
+                  rdfs:label "hasPriceCategory" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasProvider
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasProvider
 :hasProvider rdf:type owl:DatatypeProperty ;
              rdfs:domain :Transport ;
-             rdfs:range xsd:string .
+             rdfs:range xsd:string ;
+             rdfs:comment "Indicates the enterprise that provides the service" ;
+             rdfs:label "hasProvider" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantPrice
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasRestaurantPrice
 :hasRestaurantPrice rdf:type owl:DatatypeProperty ;
                     rdfs:domain :Restaurant ;
                     rdfs:range xsd:decimal ;
@@ -161,56 +169,66 @@ rdfs:title rdf:type owl:AnnotationProperty .
                     rdfs:label "hasRestaurantPrice" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasRestaurantScore
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasRestaurantScore
 :hasRestaurantScore rdf:type owl:DatatypeProperty ;
                     rdfs:domain :Restaurant ;
-                    rdfs:range xsd:decimal .
+                    rdfs:range xsd:decimal ;
+                    rdfs:comment "Indicates de score of an entity" ;
+                    rdfs:label "hasRestaurantScore" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasServesCuisine
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasServesCuisine
 :hasServesCuisine rdf:type owl:DatatypeProperty ;
                   rdfs:domain :Restaurant ;
-                  rdfs:range xsd:string .
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Indicates the type of food served" ;
+                  rdfs:label "hasServedCuisine" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasStarRating
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasStarRating
 :hasStarRating rdf:type owl:DatatypeProperty ;
                rdfs:domain :Hotel ;
                rdfs:range xsd:int ;
-               rdfs:label "Indicates the number of stars" ,
-                          "hasStarRating" .
+               rdfs:comment "Indicates the number of stars" ;
+               rdfs:label "hasStarRating" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasTransportID
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasTransportID
 :hasTransportID rdf:type owl:DatatypeProperty ;
                 rdfs:domain :Transport ;
-                rdfs:range xsd:int .
+                rdfs:range xsd:int ;
+                rdfs:comment "Unique identifier" ;
+                rdfs:label "hasTransportID" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#hasTransportPrice
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#hasTransportPrice
 :hasTransportPrice rdf:type owl:DatatypeProperty ;
                    rdfs:domain :Transport ;
-                   rdfs:range xsd:decimal .
+                   rdfs:range xsd:decimal ;
+                   rdfs:comment "Indicates the monetary value or cost associated with an entity" ;
+                   rdfs:label "hasTransportPrice" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#isRecomended
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#isRecomended
 :isRecomended rdf:type owl:DatatypeProperty ;
               rdfs:domain :Hotel ;
-              rdfs:range xsd:boolean .
+              rdfs:range xsd:boolean ;
+              rdfs:comment "Indicates if an entity is recomended or not based on its score and stars" ;
+              rdfs:label "isRecommended" .
 
 
 #################################################################
 #    Classes
 #################################################################
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Beach
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Beach
 :Beach rdf:type owl:Class ;
        rdfs:subClassOf :TouristAttraction ;
        rdfs:comment "A sandy or pebbly area beside a body of water, popular for recreation" ;
        rdfs:label "Beach" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bike
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Bike
 :Bike rdf:type owl:Class ;
       rdfs:subClassOf :Transport ;
       rdfs:comment "A human-powered vehicle with two wheels, used for individual urban or recreational transport" ;
@@ -218,41 +236,41 @@ rdfs:title rdf:type owl:AnnotationProperty .
       rdfs:seeAlso "https://dbpedia.org/page/Bicycle" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bus
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Bus
 :Bus rdf:type owl:Class ;
      rdfs:subClassOf :Transport ;
      rdfs:comment "A large motor vehicle that carries passengers by road, typically along a fixed route" ;
      rdfs:label "Bus" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#City
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#City
 :City rdf:type owl:Class ;
       rdfs:subClassOf :Settlement ;
       rdfs:comment "Urban area with a high population density and significant infrastructure and services" ;
       rdfs:label "City" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#CulturalAttraction
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#CulturalAttraction
 :CulturalAttraction rdf:type owl:Class ;
                     rdfs:subClassOf :TouristAttraction ;
                     rdfs:comment "A tourist site of cultural significance, such as theaters, heritage sites, or historical buildings" ;
                     rdfs:label "CulturalAttraction" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Event
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Event
 :Event rdf:type owl:Class ;
        rdfs:comment "An occurrence such as a concert, festival, or exhibition that attracts tourists or locals" ;
        rdfs:label "Event" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#FoodEstablishment
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#FoodEstablishment
 :FoodEstablishment rdf:type owl:Class ;
                    rdfs:subClassOf :Place ;
                    rdfs:comment "A place where food is prepared and served to the public, including restaurants, cafes, bars, or food stands" ;
                    rdfs:label "FoodEstablishment" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Hotel
 :Hotel rdf:type owl:Class ;
        rdfs:subClassOf :TouristAsset ,
                        [ rdf:type owl:Restriction ;
@@ -275,14 +293,14 @@ rdfs:title rdf:type owl:AnnotationProperty .
        rdfs:seeAlso "https://dbpedia.org/page/Hotel" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Monument
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Monument
 :Monument rdf:type owl:Class ;
           rdfs:subClassOf :TouristAttraction ;
           rdfs:comment "A structure or statue built to commemorate a notable person or event" ;
           rdfs:label "Monument" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Museum
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Museum
 :Museum rdf:type owl:Class ;
         rdfs:subClassOf :TouristAttraction ;
         rdfs:comment "An institution that conserves and displays objects of artistic, cultural, or scientific interest" ;
@@ -290,67 +308,67 @@ rdfs:title rdf:type owl:AnnotationProperty .
         rdfs:seeAlso "https://dbpedia.org/page/Museum" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Park
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Park
 :Park rdf:type owl:Class ;
       rdfs:subClassOf :TouristAttraction ;
       rdfs:comment "A public green area in a town, used for recreation and relaxation" ;
       rdfs:label "Park" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Place
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Place
 :Place rdf:type owl:Class ;
        rdfs:comment "A general location or area of interest that can be visited" ;
        rdfs:label "Place" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurant
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Restaurant
 :Restaurant rdf:type owl:Class ;
             rdfs:subClassOf :FoodEstablishment ;
             rdfs:comment "An establishment that prepares and serves food and drinks to customers" ;
             rdfs:label "Restaurant" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Settlement
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Settlement
 :Settlement rdf:type owl:Class ;
             rdfs:subClassOf :Place ;
             rdfs:comment "A human settlement, such as a village, town, or small community, usually smaller than a city" ;
             rdfs:label "Settlement" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Subway
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Subway
 :Subway rdf:type owl:Class ;
         rdfs:subClassOf :Transport ;
         rdfs:comment "An underground railway system used for urban passenger transport" ;
         rdfs:label "Subway" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Taxi
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Taxi
 :Taxi rdf:type owl:Class ;
       rdfs:subClassOf :Transport .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#TouristAsset
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#TouristAsset
 :TouristAsset rdf:type owl:Class ;
               rdfs:subClassOf :Place ;
               rdfs:comment "A general resource or element of interest within the tourism domain, such as attractions, accommodations, or experiences" ;
               rdfs:label "TouristAsset" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#TouristAttraction
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#TouristAttraction
 :TouristAttraction rdf:type owl:Class ;
                    rdfs:subClassOf :TouristAsset ;
                    rdfs:comment "A place of interest that draws visitors due to its cultural, historical, or natural value" ;
                    rdfs:label "TouristAttraction" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Tram
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Tram
 :Tram rdf:type owl:Class ;
       rdfs:subClassOf :Transport ;
       rdfs:comment "A rail vehicle that runs on tracks along public urban streets, used for local transport" ;
       rdfs:label "Tram" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Transport
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Transport
 :Transport rdf:type owl:Class ;
            rdfs:comment "Vehicles or systems used for moving from one place to another" ;
            rdfs:label "Transport" .
@@ -360,77 +378,89 @@ rdfs:title rdf:type owl:AnnotationProperty .
 #    Individuals
 #################################################################
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Autobus
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Autobus
 :Autobus rdf:type owl:NamedIndividual ,
                   :Bus ;
          :availableIn :Zaragoza ;
          :hasProvider "City Zaragoza" ;
          :hasTransportID 1 ;
-         :hasTransportPrice 5.79 .
+         :hasTransportPrice 5.79 ;
+         rdfs:comment "A public land transport vehicle used to move people within a city or between different locations" ;
+         rdfs:label "Autobus" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Barcelona
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Barcelona
 :Barcelona rdf:type owl:NamedIndividual ,
                     :City ;
            :hasLocation "41.3874,2.1686" ;
            :hasPlaceID 4 ;
-           :hasPlaceName "Barcelona" .
+           :hasPlaceName "Barcelona" ;
+           rdfs:label "Barcelona" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bicicleta_Pública
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Bicicleta_Pública
 :Bicicleta_Pública rdf:type owl:NamedIndividual ,
                             :Bike ;
                    :availableIn :Cadiz ;
                    :hasProvider "City Cadiz" ;
-                   :hasTransportPrice 9.86 .
+                   :hasTransportPrice 9.86 ;
+                   rdfs:comment "Bike you can rent" ;
+                   rdfs:label "Bicicleta_Publica" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Bilbao
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Bilbao
 :Bilbao rdf:type owl:NamedIndividual ,
                  :City ;
         :hasLocation "43.2630,-2.9350" ;
         :hasPlaceID 6 ;
-        :hasPlaceName "Bilbao" .
+        :hasPlaceName "Bilbao" ;
+        rdfs:label "Bilbao" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Cadiz
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Cadiz
 :Cadiz rdf:type owl:NamedIndividual ,
                 :City ;
        :hasLocation "36.5297,-6.2920" ;
        :hasPlaceID 9 ;
-       :hasPlaceName "Cadiz" .
+       :hasPlaceName "Cadiz" ;
+       rdfs:label "Cadiz" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Carnaval_Cadiz
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Carnaval_Cadiz
 :Carnaval_Cadiz rdf:type owl:NamedIndividual ,
                          :Event ;
                 :occursIn :Cadiz ;
                 :hasDate "19/04/2024" ;
                 :hasEventID 2 ;
                 :hasEventName "Carnaval Cadiz" ;
-                :hasEventType "Deportivo" .
+                :hasEventType "Deportivo" ;
+                rdfs:comment "A popular annual festival, known for its costumes, satirical musical groups (chirigotas), and festive atmosphere" ;
+                rdfs:label "Carnaval_Cadiz" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Carnaval_Sevilla
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Carnaval_Sevilla
 :Carnaval_Sevilla rdf:type owl:NamedIndividual ,
                            :Event ;
                   :occursIn :Sevilla ;
                   :hasDate "08/05/2024" ;
                   :hasEventID 4 ;
                   :hasEventName "Carnaval Sevilla" ;
-                  :hasEventType "Música" .
+                  :hasEventType "Música" ;
+                  rdfs:comment "A popular annual festival, known for its costumes and festive atmosphere" ;
+                  rdfs:label "Carnaval_Sevilla" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Castillo_Cadiz
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Castillo_Cadiz
 :Castillo_Cadiz rdf:type owl:NamedIndividual ,
                          :Beach ;
                 :locatedIn :Cadiz ;
                 :hasAttractionScore 3.5 ;
                 :hasPlaceID 1 ;
-                :hasPlaceName "Castillo Cadiz" .
+                :hasPlaceName "Castillo Cadiz" ;
+                rdfs:label "Playa_Cadiz" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Castillo_Sevilla
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Castillo_Sevilla
 :Castillo_Sevilla rdf:type owl:NamedIndividual ,
                            :Monument ;
                   :locatedIn :Sevilla ;
@@ -439,7 +469,7 @@ rdfs:title rdf:type owl:AnnotationProperty .
                   :hasPlaceName "Castillo Sevilla" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Catedral_Cadiz
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Catedral_Cadiz
 :Catedral_Cadiz rdf:type owl:NamedIndividual ,
                          :Park ;
                 :locatedIn :Cadiz ;
@@ -448,37 +478,43 @@ rdfs:title rdf:type owl:AnnotationProperty .
                 :hasPlaceName "Catedral Cadiz" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Congreso_Bilbao
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Congreso_Bilbao
 :Congreso_Bilbao rdf:type owl:NamedIndividual ,
                           :Event ;
                  :occursIn :Bilbao ;
                  :hasDate "01/12/2024" ;
                  :hasEventID 3 ;
                  :hasEventName "Congreso Bilbao" ;
-                 :hasEventType "Cultural" .
+                 :hasEventType "Cultural" ;
+                 rdfs:comment "A formal event that brings together professionals or experts in a field to discuss, present research, or share knowledge" ;
+                 rdfs:label "Congreso_Bilbao" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Congreso_Cadiz
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Congreso_Cadiz
 :Congreso_Cadiz rdf:type owl:NamedIndividual ,
                          :Event ;
                 :occursIn :Cadiz ;
                 :hasDate "02/06/2024" ;
                 :hasEventID 1 ;
                 :hasEventName "Congreso Cadiz" ;
-                :hasEventType "Deportivo" .
+                :hasEventType "Deportivo" ;
+                rdfs:comment "A formal event that brings together professionals or experts in a field to discuss, present research, or share knowledge" ;
+                rdfs:label "Congreso_Cadiz" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Feria_Toledo
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Feria_Toledo
 :Feria_Toledo rdf:type owl:NamedIndividual ,
                        :Event ;
               :occursIn :Toledo ;
               :hasDate "26/08/2024" ;
               :hasEventID 5 ;
               :hasEventName "Feria Toledo" ;
-              :hasEventType "Deportivo" .
+              :hasEventType "Deportivo" ;
+              rdfs:comment "A popular event that may include amusement rides, food stands, music, and performances" ;
+              rdfs:label "Feria_Toledo" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel_Palace_Zaragoza
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Hotel_Palace_Zaragoza
 :Hotel_Palace_Zaragoza rdf:type owl:NamedIndividual ,
                                 :Hotel ;
                        :locatedIn :Zaragoza ;
@@ -487,10 +523,11 @@ rdfs:title rdf:type owl:AnnotationProperty .
                        :hasHotelType "Lujo" ;
                        :hasPlaceID 5 ;
                        :hasPlaceName "Hotel Palace Zaragoza" ;
-                       :hasStarRating 4 .
+                       :hasStarRating 4 ;
+                       rdfs:label "Hotel_Palace_Zaragoza" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel_Royal_Bilbao
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Hotel_Royal_Bilbao
 :Hotel_Royal_Bilbao rdf:type owl:NamedIndividual ,
                              :Hotel ;
                     :locatedIn :Bilbao ;
@@ -499,10 +536,11 @@ rdfs:title rdf:type owl:AnnotationProperty .
                     :hasHotelType "Turistico" ;
                     :hasPlaceID 4 ;
                     :hasPlaceName "Hotel Royal Bilbao" ;
-                    :hasStarRating 3 .
+                    :hasStarRating 3 ;
+                    rdfs:label "Hotel_Royal_Bilbao" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel_Royal_Malaga
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Hotel_Royal_Malaga
 :Hotel_Royal_Malaga rdf:type owl:NamedIndividual ,
                              :Hotel ;
                     :locatedIn :Malaga ;
@@ -511,22 +549,24 @@ rdfs:title rdf:type owl:AnnotationProperty .
                     :hasHotelType "Turistico" ;
                     :hasPlaceID 3 ;
                     :hasPlaceName "Hotel Royal Malaga" ;
-                    :hasStarRating 5 .
+                    :hasStarRating 5 ;
+                    rdfs:label "Hotel_Royal_Malaga" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel_Royal_Pamplona
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Hotel_Royal_Pamplona
 :Hotel_Royal_Pamplona rdf:type owl:NamedIndividual ,
                                :Hotel ;
-                      :locatedIn :Sevilla ;
+                      :locatedIn :Pamplona ;
                       :hasHotelPrice 56 ;
                       :hasHotelScore 3.9 ;
                       :hasHotelType "Lujo" ;
                       :hasPlaceID 2 ;
                       :hasPlaceName "Hotel Royal Pamplona" ;
-                      :hasStarRating 3 .
+                      :hasStarRating 3 ;
+                      rdfs:label "Hotel_Royal_Pamplona" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Hotel_Vista_Cadiz
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Hotel_Vista_Cadiz
 :Hotel_Vista_Cadiz rdf:type owl:NamedIndividual ,
                             :Hotel ;
                    :locatedIn :Cadiz ;
@@ -535,26 +575,29 @@ rdfs:title rdf:type owl:AnnotationProperty .
                    :hasHotelType "Playa" ;
                    :hasPlaceID 1 ;
                    :hasPlaceName "Hotel Vista Cadiz" ;
-                   :hasStarRating 4 .
+                   :hasStarRating 4 ;
+                   rdfs:label "Hotel_Vista_Cadiz" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Madrid
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Madrid
 :Madrid rdf:type owl:NamedIndividual ,
                  :City ;
         :hasLocation "40.4168,-3.7038" ;
         :hasPlaceID 3 ;
-        :hasPlaceName "Madrid" .
+        :hasPlaceName "Madrid" ;
+        rdfs:label "Madrid" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Malaga
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Malaga
 :Malaga rdf:type owl:NamedIndividual ,
                  :City ;
         :hasLocation "36.7213,-4.4210" ;
         :hasPlaceID 11 ;
-        :hasPlaceName "Malaga" .
+        :hasPlaceName "Malaga" ;
+        rdfs:label "Malaga" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Metro
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Metro
 :Metro rdf:type owl:NamedIndividual ,
                 :Subway ;
        :availableIn :Madrid ;
@@ -563,16 +606,18 @@ rdfs:title rdf:type owl:AnnotationProperty .
        :hasTransportPrice 8.85 .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Museo_Madrid
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Museo_Madrid
 :Museo_Madrid rdf:type owl:NamedIndividual ,
                        :Museum ;
               :locatedIn :Madrid ;
               :hasAttractionScore 3.7 ;
               :hasPlaceID 1 ;
-              :hasPlaceName "Museo Madrid" .
+              :hasPlaceName "Museo Madrid" ;
+              rdfs:comment "An institution that conserves and displays objects of artistic, cultural, or scientific interest" ;
+              rdfs:label "Museo_Madrid" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Palacio_Pamplona
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Palacio_Pamplona
 :Palacio_Pamplona rdf:type owl:NamedIndividual ,
                            :CulturalAttraction ;
                   :locatedIn :Pamplona ;
@@ -581,15 +626,16 @@ rdfs:title rdf:type owl:AnnotationProperty .
                   :hasPlaceName "Palacio Pamplona" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Pamplona
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Pamplona
 :Pamplona rdf:type owl:NamedIndividual ,
                    :City ;
           :hasLocation "42.8169,-1.6444" ;
           :hasPlaceID 7 ;
-          :hasPlaceName "Plamplona" .
+          :hasPlaceName "Plamplona" ;
+          rdfs:label "Pamplona" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurante_Delicia_Malaga
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Restaurante_Delicia_Malaga
 :Restaurante_Delicia_Malaga rdf:type owl:NamedIndividual ,
                                      :Restaurant ;
                             :locatedIn :Malaga ;
@@ -597,10 +643,11 @@ rdfs:title rdf:type owl:AnnotationProperty .
                             :hasPlaceName "Restaurante Delicia Malaga" ;
                             :hasRestaurantPrice 38 ;
                             :hasRestaurantScore 4.9 ;
-                            :hasServesCuisine "Japonesa" .
+                            :hasServesCuisine "Japonesa" ;
+                            rdfs:label "Restaurante_Delicia_Malaga" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurante_Delicia_Pamplona
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Restaurante_Delicia_Pamplona
 :Restaurante_Delicia_Pamplona rdf:type owl:NamedIndividual ,
                                        :Restaurant ;
                               :locatedIn :Pamplona ;
@@ -608,10 +655,11 @@ rdfs:title rdf:type owl:AnnotationProperty .
                               :hasPlaceName "Restaurante Delicia Pamplona" ;
                               :hasRestaurantPrice 36 ;
                               :hasRestaurantScore 4.9 ;
-                              :hasServesCuisine "Mexicana" .
+                              :hasServesCuisine "Mexicana" ;
+                              rdfs:label "Restaurante_Delicia_Pamplona" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurante_Fusión_Valencia
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Restaurante_Fusión_Valencia
 :Restaurante_Fusión_Valencia rdf:type owl:NamedIndividual ,
                                       :Restaurant ;
                              :locatedIn :Valencia ;
@@ -619,10 +667,11 @@ rdfs:title rdf:type owl:AnnotationProperty .
                              :hasPlaceName "Restaurante Fusión Valencia" ;
                              :hasRestaurantPrice 13 ;
                              :hasRestaurantScore 4.2 ;
-                             :hasServesCuisine "Andaluza" .
+                             :hasServesCuisine "Andaluza" ;
+                             rdfs:label "Restaurante_Fusion_Valencia" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurante_Gourmet_Madrid
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Restaurante_Gourmet_Madrid
 :Restaurante_Gourmet_Madrid rdf:type owl:NamedIndividual ,
                                      :Restaurant ;
                             :locatedIn :Madrid ;
@@ -630,10 +679,11 @@ rdfs:title rdf:type owl:AnnotationProperty .
                             :hasPlaceName "Restaurante Gourmet Madrid" ;
                             :hasRestaurantPrice 30 ;
                             :hasRestaurantScore 4.8 ;
-                            :hasServesCuisine "Japonesa" .
+                            :hasServesCuisine "Japonesa" ;
+                            rdfs:label "Restaurante_Gourmet_Madrid" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Restaurante_Tradicional_Toledo
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Restaurante_Tradicional_Toledo
 :Restaurante_Tradicional_Toledo rdf:type owl:NamedIndividual ,
                                          :Restaurant ;
                                 :locatedIn :Toledo ;
@@ -641,26 +691,29 @@ rdfs:title rdf:type owl:AnnotationProperty .
                                 :hasPlaceName "Restaurante Tradicional Toledo" ;
                                 :hasRestaurantPrice 46 ;
                                 :hasRestaurantScore 3.7 ;
-                                :hasServesCuisine "Mexicana" .
+                                :hasServesCuisine "Mexicana" ;
+                                rdfs:label "Restaurante_Tradicional_Toledo" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#San_Sebastián
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#San_Sebastián
 :San_Sebastián rdf:type owl:NamedIndividual ,
                         :City ;
                :hasLocation "43.3183,-1.9812" ;
                :hasPlaceID 8 ;
-               :hasPlaceName "San Sebastian" .
+               :hasPlaceName "San Sebastian" ;
+               rdfs:label "San_Sebastian" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Sevilla
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Sevilla
 :Sevilla rdf:type owl:NamedIndividual ,
                   :City ;
          :hasLocation "37.3886,-5.9823" ;
          :hasPlaceID 10 ;
-         :hasPlaceName "Sevilla" .
+         :hasPlaceName "Sevilla" ;
+         rdfs:label "Sevilla" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Taxi
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Taxi
 :Taxi rdf:type owl:NamedIndividual ,
                :Taxi ;
       :availableIn :Bilbao ;
@@ -669,37 +722,41 @@ rdfs:title rdf:type owl:AnnotationProperty .
       :hasTransportPrice 5.75 .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Toledo
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Toledo
 :Toledo rdf:type owl:NamedIndividual ,
                  :City ;
         :hasLocation "39.8628,-4.0273" ;
         :hasPlaceID 1 ;
-        :hasPlaceName "Toledo" .
+        :hasPlaceName "Toledo" ;
+        rdfs:label "Toledo" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Tranvia
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Tranvia
 :Tranvia rdf:type owl:NamedIndividual ,
                   :Tram ;
          :availableIn :Toledo ;
          :hasProvider "Trans Toledo" ;
          :hasTransportID 1 ;
-         :hasTransportPrice 3.61 .
+         :hasTransportPrice 3.61 ;
+         rdfs:label "Tranvia" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Valencia
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Valencia
 :Valencia rdf:type owl:NamedIndividual ,
                    :City ;
           :hasLocation "39.4699,-0.3763" ;
           :hasPlaceID 2 ;
-          :hasPlaceName "Valencia" .
+          :hasPlaceName "Valencia" ;
+          rdfs:label "Valencia" .
 
 
-###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/v1.0#Zaragoza
+###  http://www.w3.org/andrea/ontologies/2025/3/tourismOntology#Zaragoza
 :Zaragoza rdf:type owl:NamedIndividual ,
                    :City ;
           :hasLocation "41.6488,-0.8891" ;
           :hasPlaceID 5 ;
-          :hasPlaceName "Zaragoza" .
+          :hasPlaceName "Zaragoza" ;
+          rdfs:label "Zaragoza" .
 
 
 #################################################################
@@ -786,23 +843,23 @@ rdfs:title rdf:type owl:AnnotationProperty .
 #    Rules
 #################################################################
 
+<http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/r> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/p> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
 <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/h> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/score> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/stars> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-<http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/r> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
-
-<http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/p> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
-
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "If a hotel has four o more stars and its score is greater than 4, then is a recommended hotel" ;
-   rdfs:label "RecommendedHotelRule" ;
+   rdfs:comment "" ;
+   rdfs:label "RecommendedHotelRuleFalse" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> ;
+                                                       <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
                                                                                                     rdf:first <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/stars> ;
                                                                                                     rdf:rest [ rdf:type rdf:List ;
@@ -818,30 +875,11 @@ rdfs:title rdf:type owl:AnnotationProperty .
                                                                   <http://www.w3.org/2003/11/swrl#argument2> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/stars>
                                                                 ] ;
                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasHotelScore ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/h> ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument2> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/score>
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :Hotel ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/h>
                                                                            ] ;
-                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> :Hotel ;
-                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/h>
-                                                                                      ] ;
-                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
-                                                                                                                                                rdf:first <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/stars> ;
-                                                                                                                                                rdf:rest [ rdf:type rdf:List ;
-                                                                                                                                                           rdf:first 4 ;
-                                                                                                                                                           rdf:rest rdf:nil
-                                                                                                                                                         ]
-                                                                                                                                              ]
-                                                                                                 ] ;
-                                                                                       rdf:rest rdf:nil
-                                                                                     ]
-                                                                          ]
+                                                                 rdf:rest rdf:nil
                                                                ]
                                                     ]
                                          ] ;
@@ -849,7 +887,139 @@ rdfs:title rdf:type owl:AnnotationProperty .
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :isRecomended ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/h> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> "true"^^xsd:boolean
+                                                       <http://www.w3.org/2003/11/swrl#argument2> "false"^^xsd:boolean
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "If restaurant price is less than 15, then its category is Budget" ;
+   rdfs:label "PriceCategoryRuleBudget" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Restaurant ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/r>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasRestaurantPrice ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/r> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/p>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/p> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 15 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasPriceCategory ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/r> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> "Budget"
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "If restaurant price is more than 15, then its category is High-end" ;
+   rdfs:label "PriceCategoryHigh-end" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Restaurant ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/r>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasRestaurantPrice ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/r> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/p>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/p> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 40 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasPriceCategory ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/r> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> "High-end"
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "If restaurant price is more than 15 and less or equal to 40, then its category is Mid--Range" ;
+   rdfs:label "PriceCategoryMid-Range" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Restaurant ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/r>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                  <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                               rdf:first <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/p> ;
+                                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                                          rdf:first 15 ;
+                                                                                                                          rdf:rest rdf:nil
+                                                                                                                        ]
+                                                                                                             ]
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/p> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 40 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasRestaurantPrice ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/r> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/p>
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasPriceCategory ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/r> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> "Mid-range"
                                                      ] ;
                                            rdf:rest rdf:nil
                                          ]
@@ -857,7 +1027,7 @@ rdfs:title rdf:type owl:AnnotationProperty .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
    rdfs:comment "" ;
-   rdfs:label "S2" ;
+   rdfs:label "RecommendedHotelRuleFalse2" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
@@ -896,32 +1066,51 @@ rdfs:title rdf:type owl:AnnotationProperty .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "" ;
-   rdfs:label "S1" ;
+   rdfs:comment "If a hotel has four o more stars and its score is greater than 4, then is a recommended hotel" ;
+   rdfs:label "RecommendedHotelRuleTrue" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasStarRating ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/h> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/stars>
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> ;
+                                                       <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                    rdf:first <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/stars> ;
+                                                                                                    rdf:rest [ rdf:type rdf:List ;
+                                                                                                               rdf:first 4 ;
+                                                                                                               rdf:rest rdf:nil
+                                                                                                             ]
+                                                                                                  ]
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
-                                                                  <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
-                                                                                                               rdf:first <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/stars> ;
-                                                                                                               rdf:rest [ rdf:type rdf:List ;
-                                                                                                                          rdf:first 4 ;
-                                                                                                                          rdf:rest rdf:nil
-                                                                                                                        ]
-                                                                                                             ]
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasHotelScore ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/h> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/score>
                                                                 ] ;
                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :Hotel ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/h>
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasStarRating ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/h> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/stars>
                                                                            ] ;
-                                                                 rdf:rest rdf:nil
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> :Hotel ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/h>
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/stars> ;
+                                                                                                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                           rdf:first 4 ;
+                                                                                                                                                           rdf:rest rdf:nil
+                                                                                                                                                         ]
+                                                                                                                                              ]
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
                                                                ]
                                                     ]
                                          ] ;
@@ -929,139 +1118,7 @@ rdfs:title rdf:type owl:AnnotationProperty .
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :isRecomended ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/h> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> "false"^^xsd:boolean
-                                                     ] ;
-                                           rdf:rest rdf:nil
-                                         ]
- ] .
-
-[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "If restaurant price is more than 15, then its category is High-end" ;
-   rdfs:label "PriceCategoryHigh-end" ;
-   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
-   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasRestaurantPrice ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/r> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/p>
-                                                     ] ;
-                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :Restaurant ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/r>
-                                                                ] ;
-                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
-                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
-                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
-                                                                                                                          rdf:first <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/p> ;
-                                                                                                                          rdf:rest [ rdf:type rdf:List ;
-                                                                                                                                     rdf:first 40 ;
-                                                                                                                                     rdf:rest rdf:nil
-                                                                                                                                   ]
-                                                                                                                        ]
-                                                                           ] ;
-                                                                 rdf:rest rdf:nil
-                                                               ]
-                                                    ]
-                                         ] ;
-   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasPriceCategory ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/r> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> "High-end"
-                                                     ] ;
-                                           rdf:rest rdf:nil
-                                         ]
- ] .
-
-[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "If restaurant price is more than 15 and less or equal to 40, then its category is Mid--Range" ;
-   rdfs:label "PriceCategoryMid-Range" ;
-   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
-   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasRestaurantPrice ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/r> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/p>
-                                                     ] ;
-                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
-                                                                  <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
-                                                                                                               rdf:first <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/p> ;
-                                                                                                               rdf:rest [ rdf:type rdf:List ;
-                                                                                                                          rdf:first 15 ;
-                                                                                                                          rdf:rest rdf:nil
-                                                                                                                        ]
-                                                                                                             ]
-                                                                ] ;
-                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
-                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> ;
-                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
-                                                                                                                          rdf:first <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/p> ;
-                                                                                                                          rdf:rest [ rdf:type rdf:List ;
-                                                                                                                                     rdf:first 40 ;
-                                                                                                                                     rdf:rest rdf:nil
-                                                                                                                                   ]
-                                                                                                                        ]
-                                                                           ] ;
-                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> :Restaurant ;
-                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/r>
-                                                                                      ] ;
-                                                                            rdf:rest rdf:nil
-                                                                          ]
-                                                               ]
-                                                    ]
-                                         ] ;
-   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasPriceCategory ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/r> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> "Mid-range"
-                                                     ] ;
-                                           rdf:rest rdf:nil
-                                         ]
- ] .
-
-[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment "If restaurant price is less than 15, then its category is Budget" ;
-   rdfs:label "PriceCategoryRuleBudget" ;
-   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
-   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasRestaurantPrice ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/r> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/p>
-                                                     ] ;
-                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> ;
-                                                                  <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
-                                                                                                               rdf:first <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/p> ;
-                                                                                                               rdf:rest [ rdf:type rdf:List ;
-                                                                                                                          rdf:first 15 ;
-                                                                                                                          rdf:rest rdf:nil
-                                                                                                                        ]
-                                                                                                             ]
-                                                                ] ;
-                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :Restaurant ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/r>
-                                                                           ] ;
-                                                                 rdf:rest rdf:nil
-                                                               ]
-                                                    ]
-                                         ] ;
-   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasPriceCategory ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/andrea/ontologies/2025/3/tourismOntology/r> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> "Budget"
+                                                       <http://www.w3.org/2003/11/swrl#argument2> "true"^^xsd:boolean
                                                      ] ;
                                            rdf:rest rdf:nil
                                          ]
